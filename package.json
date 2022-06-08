@@ -1,0 +1,11 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "main": "server/src/index.js",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "start": "node ./server/src/index.js",
+    "start:dev": "nodemon --inspect ./src/index.js"
+  }
+}

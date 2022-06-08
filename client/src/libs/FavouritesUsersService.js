@@ -1,12 +1,12 @@
 export class FavouriteUsersService {
   getUsers() {
-    return fetch("http://localhost:3001/user/favourites", {
+    return fetch("https://find-users.herokuapp.com/user/favourites", {
       method: "GET",
     }).then((data) => data.json());
   }
-  
+
   getOneUser(email) {
-    return fetch("http://localhost:3001/user/getOneFavourite", {
+    return fetch("https://find-users.herokuapp.com/user/getOneFavourite", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -14,9 +14,9 @@ export class FavouriteUsersService {
       body: JSON.stringify(email),
     }).then((data) => data.json());
   }
-  
+
   addUser(user) {
-    return fetch("http://localhost:3001/user/addToFavourites", {
+    return fetch("https://find-users.herokuapp.com/user/addToFavourites", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -26,7 +26,7 @@ export class FavouriteUsersService {
   }
 
   removeUser(user) {
-    return fetch("http://localhost:3001/user/removeFavourite", {
+    return fetch("https://find-users.herokuapp.com/user/removeFavourite", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

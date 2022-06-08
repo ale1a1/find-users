@@ -1,11 +1,11 @@
 export class UsersService {
   getUsers() {
-    return fetch("http://localhost:3001/user", {
+    return fetch("https://find-users.herokuapp.com/user", {
       method: "GET",
     }).then((data) => data.json());
   }
   getCurrentUser(email) {
-    return fetch("http://localhost:3001/user/currentUser", {
+    return fetch("https://find-users.herokuapp.com/user/currentUser", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -14,7 +14,7 @@ export class UsersService {
     }).then((data) => data.json());
   }
   addUser(user) {
-    return fetch("http://localhost:3001/user/register", {
+    return fetch("https://find-users.herokuapp.com/user/register", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -26,7 +26,7 @@ export class UsersService {
     });
   }
   loginUser(email, password) {
-    return fetch("http://localhost:3001/user/login", {
+    return fetch("https://find-users.herokuapp.com/user/login", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -43,7 +43,7 @@ export class UsersService {
   //     body: JSON.stringify({ id, name, phoneNumber }),
   //   }).then((data) => data.json());
   editUser(id, name, phoneNumber) {
-    return fetch("http://localhost:3001/user/editUser", {
+    return fetch("https://find-users.herokuapp.com/user/editUser", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

@@ -9,11 +9,11 @@ const usersService = new UsersService();
 
 export function MyProfile(props) {
   const [currentUser, setCurrentUser] = useState({});
- 
 
   useEffect(() => {
     const currentUser = loginRepository.list();
     const currentUserEmail = { email: currentUser[0] };
+    console.log(currentUser[0]);
     usersService
       .getCurrentUser(currentUserEmail)
       .then((user) => setCurrentUser(user));
@@ -70,7 +70,7 @@ export function MyProfile(props) {
         </div>
       </div>
       <MyProfileFormModal
-        currentUser={currentUser}       
+        currentUser={currentUser}
         changeName={changeName}
         changePhoneNumber={changePhoneNumber}
         updateUser={updateUser}

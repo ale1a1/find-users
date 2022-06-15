@@ -8,7 +8,12 @@ class UserController {
   }
 
   listFavourites(req, res) {
-    const users = FavouriteUser.findAll().then((users) => res.send(users));
+    const request = req.body;
+    const users = FavouriteUser.findAll({
+      where: {
+        owner: request,
+      },
+    }).then((users) => res.send(users));
   }
 
   async login(req, res) {
@@ -101,7 +106,7 @@ class UserController {
     });
   }
 
-  async getOneFromFav (req, res) {
+  async getOneFromFav(req, res) {
     console.log(req.body);
     console.log("Getting one User from Favourites");
     const request = req.body;
@@ -126,8 +131,6 @@ class UserController {
     });
     res.send(user);
   }
-
-
 
   async editUser(req, res) {
     console.log(req.body);

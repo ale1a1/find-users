@@ -8,7 +8,7 @@ class UserController {
   }
 
   listFavourites(req, res) {
-    const request = req.body;
+    const request = req.params.owner;
     const users = FavouriteUser.findAll({
       where: {
         owner: request,

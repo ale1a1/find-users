@@ -4,7 +4,7 @@ const router = express.Router();
 const { userController } = require("../controller");
 
 router.get("/", userController.listUsers);
-router.get("/favourites", userController.listFavourites);
+router.get("/favourites/:owner", userController.listFavourites);
 router.post("/login", userController.login);
 router.post("/register", userController.register);
 router.post("/addToFavourites", userController.addToFav);

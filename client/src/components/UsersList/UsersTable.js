@@ -12,7 +12,7 @@ export function UsersTable(props) {
             <td>{user.phoneNumber}</td>
             <td>
               <button className="btn btn-outline-primary btn-sm" disabled>
-                already on my favourites
+                on my favourites
               </button>
             </td>
           </tr>
@@ -30,7 +30,7 @@ export function UsersTable(props) {
                 }}
                 className="btn btn-outline-warning btn-sm"
               >
-                Add to my favourite Users list
+                add to favourites
               </button>
             </td>
           </tr>

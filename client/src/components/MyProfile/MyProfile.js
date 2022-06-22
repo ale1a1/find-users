@@ -77,11 +77,11 @@ export function MyProfile(props) {
             </tbody>
           </table>
           <button
-            className="btn btn-outline-warning btn-md m-auto"
+            className="btn btn-outline-warning btn-md ms-5"
             data-bs-toggle="modal"
             data-bs-target="#editProfileModal"
           >
-            Edit profile
+            Edit
           </button>
         </div>
       </div>

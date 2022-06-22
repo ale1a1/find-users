@@ -80,7 +80,7 @@ export class FavouriteUsers extends Component {
                 <tr>
                   <th>Username</th>
                   <th>Email address</th>
-                  <th>Phone number</th>
+                  <th>Email address</th>
                 </tr>
               </thead>
               <tbody>

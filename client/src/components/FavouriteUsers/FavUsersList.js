@@ -11,7 +11,7 @@ export function FavUsersList({ users, onRemove }) {
           }}
           className="btn btn-outline-warning btn-sm"
         >
-          Remove User from my favourites
+          remove
         </button>
       </td>
     </tr>

@@ -10,16 +10,20 @@
   margin-bottom: 10rem;
 }
 
+.smallFontSize {
+  font-size: 0.75rem;
+}
+
 @media only screen and (max-width: 600px) {
   .footerH2 {
-    font-size: 1.1rem !important;
+    font-size: 0.8rem !important;
     font-family: Georgia, "Times New Roman", Times, serif;
     padding-top: 2%;
     padding-bottom: 2%;
     margin-bottom: -4px;
   }
   .footerIcons {
-    padding-left: 30%;
+    padding-left: 50%;
     padding-top: 0;
   }
   .footerIcon {

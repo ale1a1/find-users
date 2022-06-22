@@ -7,6 +7,8 @@ const UserRouter = require("./router/UserRouter");
 
 const app = express();
 
+// const PORT = 3001;
+
 module.exports = () => {
   app.use(cors());
 
@@ -21,4 +23,10 @@ module.exports = () => {
   app.listen(3001, () =>
     console.log("API is running on http://localhost:3001")
   );
+
+  // app.listen(process.env.PORT || PORT, () =>
+  //   console.log(`Server running on port ${PORT}`)
+  // );
 };
+
+//ignore this comment!!!//

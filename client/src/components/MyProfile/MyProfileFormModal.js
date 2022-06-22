@@ -43,7 +43,10 @@ export function MyProfileFormModal(props) {
         console.log(labelErrorMessage);
       } else {
         logoutRepository.remove();
-        loginRepository.save(props.currentUser.email);
+        loginRepository.save({
+          email: props.currentUser.email,
+          id: props.currentUser.id,
+        });
         console.log(props.currentUser.id);
         // props.updateUser(response.data.user)
         alert("user profile updated!"); ///!!!!!NOT WORKING!!!!!!!!!!///

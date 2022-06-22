@@ -1,5 +1,4 @@
 import React, { Fragment, useState, useEffect } from "react";
-import { Navbar } from "../Navbar/Navbar";
 import { MyProfileFormModal } from "./MyProfileFormModal";
 import { LoginRepository } from "../../libs/repository/LoginRepository";
 import { UsersService } from "../../libs/UsersService";
@@ -9,15 +8,35 @@ const usersService = new UsersService();
 
 export function MyProfile(props) {
   const [currentUser, setCurrentUser] = useState({});
- 
+
+  //////////////CASINO DEL LOP START OF TESTS
+
+  const retrievedUser = loginRepository.list();
+  const currentUserEmail = { email: retrievedUser[0].email };
 
   useEffect(() => {
-    const currentUser = loginRepository.list();
-    const currentUserEmail = { email: currentUser[0] };
     usersService
       .getCurrentUser(currentUserEmail)
       .then((user) => setCurrentUser(user));
   }, []);
+
+  // const retrievedUser = loginRepository.list();
+  // const currentUserEmail = { email: retrievedUser[0] };
+  // usersService
+  //   .getCurrentUser(currentUserEmail)
+  //   .then((user) => setCurrentUser(user));
+
+  // const user = usersService
+  //   .getCurrentUser(currentUserEmail)
+  //   .then((user) => user);
+
+  // console.log(user);
+
+  // const [currentUser, setCurrentUser] = useState({ name: "alex" });
+
+  // console.log(currentUser);
+
+  //////////////CASINO DEL LOP END OF TESTS
 
   const updateUser = (updatedUser) => {
     setCurrentUser(updatedUser);
@@ -38,39 +57,36 @@ export function MyProfile(props) {
 
   return (
     <Fragment>
-      <Navbar logoutHandler={props.logoutHandler} />
-      <div className="bg-dark vh-100">
-        <div className="container pt-5">
-          <h3 className="text-light mt-5 mb-5">MY PROFILE </h3>
-          <div className="table-responsive">
-            <table className="table  text-light  w-50 mt-5 ms-5">
-              <tbody>
-                <tr>
-                  <th scope="col">Username</th>
-                  <td>{currentUser.name}</td>
-                </tr>
-                <tr>
-                  <th scope="col">Email address</th>
-                  <td>{currentUser.email}</td>
-                </tr>
-                <tr>
-                  <th scope="col">Phone number</th>
-                  <td>{currentUser.phoneNumber}</td>
-                </tr>
-              </tbody>
-            </table>
-            <button
-              className="btn btn-outline-warning btn-md m-auto"
-              data-bs-toggle="modal"
-              data-bs-target="#editProfileModal"
-            >
-              Edit profile
-            </button>
-          </div>
+      <div className="container pt-5">
+        <h3 className="text-light mt-5 mb-5">MY PROFILE </h3>
+        <div className="table-responsive">
+          <table className="table  text-light  w-50 mt-5 ms-5">
+            <tbody>
+              <tr>
+                <th scope="col">Username</th>
+                <td>{currentUser.name}</td>
+              </tr>
+              <tr>
+                <th scope="col">Email address</th>
+                <td>{currentUser.email}</td>
+              </tr>
+              <tr>
+                <th scope="col">Phone number</th>
+                <td>{currentUser.phoneNumber}</td>
+              </tr>
+            </tbody>
+          </table>
+          <button
+            className="btn btn-outline-warning btn-md m-auto"
+            data-bs-toggle="modal"
+            data-bs-target="#editProfileModal"
+          >
+            Edit profile
+          </button>
         </div>
       </div>
       <MyProfileFormModal
-        currentUser={currentUser}       
+        currentUser={currentUser}
         changeName={changeName}
         changePhoneNumber={changePhoneNumber}
         updateUser={updateUser}

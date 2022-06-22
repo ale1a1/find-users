@@ -1,14 +1,37 @@
 const { Op } = require("@sequelize/core");
 const { User } = require("../repository");
 const { FavouriteUser } = require("../repository");
+const { FavouriteUserJunction } = require("../repository");
 
 class UserController {
-  listUsers(req, res) {
-    const users = User.findAll().then((users) => res.send(users));
+  async listUsers(req, res) {
+    const users = await User.findAll().then((users) => res.send(users));
   }
 
-  listFavourites(req, res) {
-    const users = FavouriteUser.findAll().then((users) => res.send(users));
+  async listFavourites(req, res) {
+    const request = req.body;
+    console.log(typeof request);
+    console.log(request);
+    const users = await User.findAll({
+      where: {
+        id: { [Op.in]: [...request] },
+      },
+    }).then((users) => res.send(users));
+
+    // const users = User.findAll({
+    //   where: {
+    //     id: 30,
+    //   },
+    // }).then((users) => res.send(users));
+  }
+
+  getFavouritesJunction(req, res) {
+    const request = req.params.id;
+    const users = FavouriteUserJunction.findAll({
+      where: {
+        ownerID: request,
+      },
+    }).then((users) => res.send(users));
   }
 
   async login(req, res) {
@@ -86,14 +109,26 @@ class UserController {
     });
   }
 
+  async addToFavJunction(req, res) {
+    console.log(req.body);
+    //validation qui con un if??? if body.name or email non esistono gia, continui con user= await User.create...???
+    //else send un messaggio-token che va ad aggiornare lo state del registerModal component in modo tale che venga renderizzato
+    //sotto la label che esistono gia...e ti invita a inserire credenziali diverse
+    const user = await FavouriteUserJunction.create(req.body);
+    res.send({
+      message: `User ${req.body.name} added to favourites!`,
+      user: user,
+    });
+  }
+
   async removeFromFav(req, res) {
     console.log(req.body);
     //validation qui con un if??? if body.name or email non esistono gia, continui con user= await User.create...???
     //else send un messaggio-token che va ad aggiornare lo state del registerModal component in modo tale che venga renderizzato
     //sotto la label che esistono gia...e ti invita a inserire credenziali diverse
     // const user = await FavouriteUser.create(req.body);
-    const user = await FavouriteUser.destroy({
-      where: { email: req.body.email },
+    const user = await FavouriteUserJunction.destroy({
+      where: { favUserID: req.body.id },
     });
     res.send({
       message: `User ${req.body.name} removed from favourites!`,
@@ -101,7 +136,7 @@ class UserController {
     });
   }
 
-  async getOneFromFav (req, res) {
+  async getOneFromFav(req, res) {
     console.log(req.body);
     console.log("Getting one User from Favourites");
     const request = req.body;
@@ -126,8 +161,6 @@ class UserController {
     });
     res.send(user);
   }
-
-
 
   async editUser(req, res) {
     console.log(req.body);

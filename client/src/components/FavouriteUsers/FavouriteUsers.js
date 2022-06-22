@@ -1,9 +1,12 @@
 import { Component, Fragment } from "react";
-import { Navbar } from "../Navbar/Navbar";
 import { FavUsersList } from "./FavUsersList";
 import { FavouriteUsersService } from "../../libs/FavouritesUsersService";
+import { LoginRepository } from "../../libs/repository/LoginRepository";
 
 const favouriteUsersService = new FavouriteUsersService();
+const loginRepository = new LoginRepository();
+const owner = loginRepository.list()[0];
+const currentUserID = loginRepository.list()[0]?.id;
 
 export class FavouriteUsers extends Component {
   constructor(props) {
@@ -12,53 +15,81 @@ export class FavouriteUsers extends Component {
       favouriteUsers: [],
     };
 
-    this.removeFavourite = (user) => {
-      favouriteUsersService.removeUser(user);
-      favouriteUsersService
-        .getUsers()
-        .then((favouriteUsers) => this.setState({ favouriteUsers }));
-    };
+    // this.removeFavourite = (user) => {
+    //   favouriteUsersService.removeUser(user);
+    //   favouriteUsersService
+    //     .getUsers()
+    //     .then((favouriteUsers) => this.setState({ favouriteUsers }));
+    // };
 
-    this.onRemove = (user) => {
-      this.removeFavourite(user);
+    // this.onRemove = (user) => {
+    //   this.removeFavourite(user);
+    // };
+
+    //////Fai una cosa simile per USERLIST!!!
+
+    this.onRemove = async (user) => {
+      await favouriteUsersService.removeUser(user);
+      favouriteUsersService
+        .getUsersFromJunction(currentUserID)
+        .then((users) => users.map((user) => parseInt(user.favUserID)))
+        .then((idList) => favouriteUsersService.getUsers(idList))
+        .then((favUsers) => this.setState({ favouriteUsers: favUsers }));
     };
   }
+
+  // useEffect(() => {
+  //   usersService.getUsers().then((users) => setUsers(users));
+  //   // favouriteUsersService
+  //   //   .getUsersFromJunction(currentUserID)
+  //   //   .then((users) => users.map((user) => user.id))
+  //   //   .then((idList) => favouriteUsersService.getUsers(idList))
+  //   //   .then((favUsers) => setFavouriteUsersList(favUsers));
+  //   favouriteUsersService
+  //     .getUsersFromJunction(currentUserID)
+  //     .then((users) => users.map((user) => parseInt(user.favUserID)))
+  //     .then((idList) => favouriteUsersService.getUsers(idList))
+  //     .then((favUsers) => setFavouriteUsersList(favUsers));
+  //   // favouriteUsersService
+  //   //   .getUsers(favUsersJunctionIdList)
+  //   //   .then((favouriteUsers) => setFavouriteUsersList(favouriteUsers));
+  // }, []);
 
   componentDidMount() {
     favouriteUsersService
-      .getUsers()
-      .then((favouriteUsers) => this.setState({ favouriteUsers }));
+      .getUsersFromJunction(currentUserID)
+      .then((users) => users.map((user) => parseInt(user.favUserID)))
+      .then((idList) => favouriteUsersService.getUsers(idList))
+      .then((favUsers) => this.setState({ favouriteUsers: favUsers }));
   }
-  componentDidUpdate() {
-    favouriteUsersService
-      .getUsers()
-      .then((favouriteUsers) => this.setState({ favouriteUsers }));
-  }
+
+  // componentDidMount() {
+  //   favouriteUsersService
+  //     .getUsers(owner)
+  //     .then((favouriteUsers) => this.setState({ favouriteUsers }));
+  // }
 
   render() {
     return (
       <Fragment>
-        <Navbar logoutHandler={this.props.logoutHandler} />
-        <div className="bg-dark vh-100">
-          <div className="container pt-5">
-            <h3 className="text-light mt-5 mb-5">FAVOURITE USERS LIST</h3>
-            <div className="table-responsive">
-              <table className="table  text-light w-75 mt-5 ms-5">
-                <thead>
-                  <tr>
-                    <th>Username</th>
-                    <th>Email address</th>
-                    <th>Phone number</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <FavUsersList
-                    users={this.state.favouriteUsers}
-                    onRemove={this.onRemove}
-                  />
-                </tbody>
-              </table>
-            </div>
+        <div className="container pt-5">
+          <h3 className="text-light mt-5 mb-5">FAVOURITE USERS LIST</h3>
+          <div className="table-responsive">
+            <table className="table  text-light w-75 mt-5 ms-5">
+              <thead>
+                <tr>
+                  <th>Username</th>
+                  <th>Email address</th>
+                  <th>Phone number</th>
+                </tr>
+              </thead>
+              <tbody>
+                <FavUsersList
+                  users={this.state.favouriteUsers}
+                  onRemove={this.onRemove}
+                />
+              </tbody>
+            </table>
           </div>
         </div>
       </Fragment>

@@ -1,93 +1,127 @@
 import { Fragment, useState, useEffect } from "react";
-import { Navbar } from "../Navbar/Navbar";
 
+import { UsersTable } from "./UsersTable";
+import { LoginRepository } from "../../libs/repository/LoginRepository";
 import { FavouriteUsersService } from "../../libs/FavouritesUsersService";
 import { UsersService } from "../../libs/UsersService";
 
 const favouriteUsersService = new FavouriteUsersService();
 const usersService = new UsersService();
+const loginRepository = new LoginRepository();
+// const owner = loginRepository.list()[0];
+// console.log("owner" + owner);
 
 export function UsersList(props) {
+  // const getCurrentUserId = async () => {
+  //   const currentUserEmail = loginRepository.list()[0].email;
+  //   const currentUserID = await usersService
+  //     .getCurrentUser({ email: currentUserEmail })
+  //     .then((user) => user.id);
+  //   return currentUserID;
+  // };
+
   const [usersList, setUsers] = useState([]);
   const [favouriteUsersList, setFavouriteUsersList] = useState([]);
 
-  const users = () => {
-    const renderedUser = usersList.map((user) => {
-      if (favouriteUsersList.filter((e) => e.email === user.email).length > 0) {
-        console.log("already in the favourites");
-        return (
-          <tr key={user.id}>
-            <td>{user.name}</td>
-            <td>{user.email}</td>
-            <td>{user.phoneNumber}</td>
-            <td>
-              <button className="btn btn-outline-primary btn-sm" disabled>
-                already on my favourites
-              </button>
-            </td>
-          </tr>
-        );
-      } else {
-        console.log("Not yet in the favourite");
-        return (
-          <tr key={user.id}>
-            <td>{user.name}</td>
-            <td>{user.email}</td>
-            <td>{user.phoneNumber}</td>
-            <td>
-              <button
-                onClick={function () {
-                  updateUsersList(user);
-                }}
-                className="btn btn-outline-warning btn-sm"
-              >
-                Add to my favourite Users list
-              </button>
-            </td>
-          </tr>
-        );
-      }
-    });
-    return renderedUser;
-  };
+  const currentUserID = loginRepository.list()[0].id;
+  const currentUserEmail = loginRepository.list()[0].email;
 
-  const [usersTable, setUsersTable] = useState(users());
+  let favUsersJunctionIdList = [];
+
+  const favUsersFunction = async () => {
+    const favUsersJunction = await favouriteUsersService.getUsersFromJunction(
+      currentUserID
+    );
+    favUsersJunction.forEach((user) =>
+      favUsersJunctionIdList.push(parseInt(user.favUserID))
+    );
+    const updatedFavouriteUsers = await favouriteUsersService.getUsers(
+      favUsersJunctionIdList
+    );
+    console.log(updatedFavouriteUsers);
+    setFavouriteUsersList(updatedFavouriteUsers);
+    console.log(favUsersJunctionIdList);
+    const updatedUsers = await usersService.getUsers();
+    setUsers(updatedUsers);
+  };
 
   useEffect(() => {
     usersService.getUsers().then((users) => setUsers(users));
+    // favouriteUsersService
+    //   .getUsersFromJunction(currentUserID)
+    //   .then((users) => users.map((user) => user.id))
+    //   .then((idList) => favouriteUsersService.getUsers(idList))
+    //   .then((favUsers) => setFavouriteUsersList(favUsers));
     favouriteUsersService
-      .getUsers()
-      .then((favouriteUsers) => setFavouriteUsersList(favouriteUsers));
-      setUsersTable(users());
+      .getUsersFromJunction(currentUserID)
+      .then((users) => users.map((user) => parseInt(user.favUserID)))
+      .then((idList) => favouriteUsersService.getUsers(idList))
+      .then((favUsers) => setFavouriteUsersList(favUsers));
+    // favouriteUsersService
+    //   .getUsers(favUsersJunctionIdList)
+    //   .then((favouriteUsers) => setFavouriteUsersList(favouriteUsers));
   }, []);
 
-  const addUser = favouriteUsersService.addUser;
+  console.log(usersList);
+  console.log(favouriteUsersList);
 
-  const updateUsersList = (user) => {
-    setUsersTable(users());
-    addUser(user);
+  // favouriteUsersService.getUsers(idList)
+  // setFavouriteUsersList(favUsers),
+
+  // useEffect(() => {
+  //   favUsersFunction();
+  // });
+
+  const updateUsersList = async (user) => {
+    // const favouriteUser = { owner, ...user };
+    const userForJunction = { ownerID: currentUserID, favUserID: user.id };
+    // await favouriteUsersService.addUser(favouriteUser);
+    await favouriteUsersService.addUserToJunction(userForJunction);
+    // const updatedUsers = await usersService.getUsers();
+    // const updatedFavouriteUsers = await favouriteUsersService.getUsers(owner);
+    // const favUsersJunction = await favouriteUsersService.getUsersFromJunction(
+    //   currentUserID
+    // ); //da questo array di object tira fuori una lista di Favuser Id che appartengono all user che ha come ID il current User ID!
+    // dopo di che quando hai questi ID in un array query il DB cerando gli user che hanno questi ID e ritornali in una const
+    // quest const, che è un array di users, sarà usata per fare un for each e aggiornare sia la lista di userlist component,
+    // che la lista di fav user component
+    // const favUsersJunctionIdList = [];
+    // favUsersJunction.forEach((user) =>
+    //   favUsersJunctionIdList.push(user.favUserID)
+    // );
+    // const updatedFavouriteUsers = await favouriteUsersService.getUsers(
+    //   favUsersJunctionIdList
+    // );
+    // console.log(favUsersJunction);
+    // console.log(favUsersJunctionIdList);
+    // console.log(updatedFavouriteUsers);
+    // setUsers(updatedUsers);
+    // // setFavouriteUsersList(updatedFavouriteUsers);
+    favUsersFunction();
   };
 
   return (
     <Fragment>
-      <Navbar logoutHandler={props.logoutHandler} />
-      <div className="bg-dark vh-100">
-        <div className="container pt-5">
-          <h3 className="text-light mt-5 mb-5">ALL USERS LIST</h3>
-          <div className="table-responsive">
-            <table className="table  text-light mt-5 w-75 ms-5">
-              <thead>
-                <tr>
-                  <th>Username</th>
-                  <th>Email address</th>
-                  <th>Phone number</th>
-                </tr>
-              </thead>
-              {/* <tbody>{usersTable}</tbody> */}
-              {/* should be this one...bbu it comes back empty...why???? */}
-              <tbody>{users()}</tbody>
-            </table>
-          </div>
+      <div className="container pt-5">
+        <h3 className="text-light mt-5 mb-1">ALL USERS LIST</h3>
+        <div className="table-responsive">
+          <table className="table  text-light mt-5 w-75 ms-5">
+            <thead>
+              <tr>
+                <th>Username</th>
+                <th>Email address</th>
+                <th>Phone number</th>
+              </tr>
+            </thead>
+            <tbody>
+              <UsersTable
+                usersList={usersList}
+                favouriteUsersList={favouriteUsersList}
+                updateUsersList={updateUsersList}
+                currentUserEmail={currentUserEmail}
+              />
+            </tbody>
+          </table>
         </div>
       </div>
     </Fragment>

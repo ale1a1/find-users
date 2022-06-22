@@ -5,14 +5,16 @@ const logoutRepository = new LogoutRepository();
 
 export function Navbar(props) {
   const logOut = () => {
-    logoutRepository.remove()
-    props.logoutHandler()
+    logoutRepository.remove();
+    props.logoutHandler();
   };
 
   return (
     <Fragment>
       return (
-      <nav className="navbar navbar-expand-lg navbar-dark bg-danger fixed-top">
+      <nav
+        className={`${props.hidden} navbar navbar-expand-lg navbar-dark bg-danger fixed-top`}
+      >
         <div className="container-fluid">
           <a className="navbar-brand font-monospace" href="/">
             Find Users Web Application
@@ -43,7 +45,7 @@ export function Navbar(props) {
                 <a
                   //   className={`nav-link ${props.searchClass} text-uppercase`}
                   className="nav-link  text-uppercase"
-                  href="users"
+                  href="/users"
                 >
                   All Users
                 </a>
@@ -52,7 +54,7 @@ export function Navbar(props) {
                 <a
                   //   className={`nav-link ${props.buddiesClass} text-uppercase`}
                   className="nav-link  text-uppercase"
-                  href="favourites"
+                  href="/favourites"
                 >
                   My favourite Users
                 </a>
@@ -61,7 +63,7 @@ export function Navbar(props) {
                 <a
                   //   className={`nav-link ${props.profileClass} text-uppercase`}
                   className="nav-link  text-uppercase"
-                  href="profile"
+                  href="/profile"
                 >
                   My profile
                   {/* My profile ({gamebuddyUsername}) */}

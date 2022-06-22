@@ -7,11 +7,16 @@ const loginRepository = new LoginRepository();
 
 const addUser = usersService.addUser;
 
-export function RegisterModal() {
+export function RegisterModal(props) {
   const [form, setForm] = useState({});
   const [labelErrorMessage, setLabelErrorMessage] = useState({});
 
+  const IsLoggedIn = () => {
+    props.loginHandler();
+  };
+
   const handler = async (e) => {
+    e.preventDefault();
     await addUser(form).then((response) => {
       const errors = {};
       if (response.status === 409) {
@@ -21,14 +26,18 @@ export function RegisterModal() {
         setLabelErrorMessage(errors);
         console.log(labelErrorMessage);
       } else {
-        loginRepository.save(response.data.user);
+        loginRepository.save({
+          email: response.data.user.email,
+          id: response.data.user.id,
+        });
+        IsLoggedIn();
         alert("User successfully created. Click ok to login");
       }
     });
   };
 
   const closeHandler = () => {
-    // setForm({ name: "", email: "", password: "", phoneNumber: "" });
+    setForm({ name: "", email: "", password: "", phoneNumber: "" });
   };
 
   return (
@@ -55,7 +64,6 @@ export function RegisterModal() {
               <form
                 onSubmit={function (e) {
                   handler(e);
-                  // e.preventDefault();
                 }}
               >
                 <div className="mb-3">

@@ -1,4 +1,4 @@
-export function FavUsersList({users, onRemove}) {
+export function FavUsersList({ users, onRemove }) {
   return users.map((user) => (
     <tr key={user.id}>
       <td>{user.name}</td>

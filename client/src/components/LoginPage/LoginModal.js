@@ -5,14 +5,20 @@ import { LoginRepository } from "../../libs/repository/LoginRepository";
 const usersService = new UsersService();
 const logingRepository = new LoginRepository();
 
-export function LoginModal() {
+export function LoginModal(props) {
   const [email, setEmail] = useState();
   const [password, setPassword] = useState();
 
   const login = async (email, password) => {
     await usersService.loginUser(email, password).then((user) => {
-      logingRepository.save(user.email);       
+      if (user) props.loginHandler();
+      logingRepository.save({ email: user.email, id: user.id });
     });
+  };
+
+  const closeHandler = () => {
+    setEmail("");
+    setPassword("");
   };
 
   return (
@@ -39,8 +45,10 @@ export function LoginModal() {
             </div>
             <div className="modal-body">
               <form
-                onSubmit={function () {
+                onSubmit={function (e) {
                   login(email, password);
+                  closeHandler();
+                  e.preventDefault();
                 }}
               >
                 <div className="mb-3">
@@ -73,10 +81,15 @@ export function LoginModal() {
                     className="btn btn-danger mt-2"
                     type="button"
                     data-bs-dismiss="modal"
+                    onClick={closeHandler}
                   >
                     Close
                   </button>
-                  <button className="btn btn-primary mt-2" type="submit">
+                  <button
+                    className="btn btn-primary mt-2"
+                    type="submit"
+                    // data-bs-dismiss="modal"
+                  >
                     Login
                   </button>
                 </div>

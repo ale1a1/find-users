@@ -1,11 +1,13 @@
+import { config } from "../config";
 export class UsersService {
   getUsers() {
-    return fetch("http://localhost:3001/user", {
+    return fetch(`${config.serverUrl}/user`, {
       method: "GET",
     }).then((data) => data.json());
   }
+
   getCurrentUser(email) {
-    return fetch("http://localhost:3001/user/currentUser", {
+    return fetch(`${config.serverUrl}/user/currentUser`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -13,8 +15,9 @@ export class UsersService {
       body: JSON.stringify(email),
     }).then((data) => data.json());
   }
+
   addUser(user) {
-    return fetch("http://localhost:3001/user/register", {
+    return fetch(`${config.serverUrl}/user/register`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -25,8 +28,9 @@ export class UsersService {
       return { status: data.status, data: json };
     });
   }
+
   loginUser(email, password) {
-    return fetch("http://localhost:3001/user/login", {
+    return fetch(`${config.serverUrl}/user/login`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -42,8 +46,9 @@ export class UsersService {
   //     },
   //     body: JSON.stringify({ id, name, phoneNumber }),
   //   }).then((data) => data.json());
+
   editUser(id, name, phoneNumber) {
-    return fetch("http://localhost:3001/user/editUser", {
+    return fetch(`${config.serverUrl}/user/editUser`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

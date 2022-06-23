@@ -10,6 +10,10 @@
   margin-bottom: 10rem;
 }
 
+.highMarginTop {
+  margin-top: 5rem;
+}
+
 .smallFontSize {
   font-size: 0.85rem;
 }

@@ -77,7 +77,7 @@ export class FavouriteUsers extends Component {
         <div className="container pt-5">
           <h3 className="text-light mt-5 mb-5">FAVOURITE USERS LIST</h3>
           <div className="table-responsive">
-            <table className="table text-light w-75 mt-5 ms-5 align-middle table-borderless">
+            <table className="table text-light w-75 mt-5 ms-5 align-middle">
               <thead className="table-light">
                 <tr>
                   <th>Username</th>

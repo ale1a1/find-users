@@ -105,8 +105,8 @@ export function UsersList(props) {
       <div className="container pt-5">
         <h3 className="text-light mt-5 mb-1">ALL USERS LIST</h3>
         <div className="table-responsive">
-          <table className="table  text-light mt-5 w-75 ms-5">
-            <thead>
+          <table className="table text-light mt-5 w-75 ms-5 align-middle table-borderless">
+            <thead className="table-light">
               <tr>
                 <th>Username</th>
                 <th>Email address</th>

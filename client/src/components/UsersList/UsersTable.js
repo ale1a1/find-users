@@ -6,12 +6,12 @@ export function UsersTable(props) {
         0
       ) {
         return (
-          <tr key={user.id}>
+          <tr className="hoverTable" key={user.id}>
             <td>{user.name}</td>
             <td>{user.email}</td>
             <td>{user.phoneNumber}</td>
-            <td>
-              <button className="btn btn-outline-primary btn-sm" disabled>
+            <td className="right">
+              <button className="btn btn-outline-secondary btn-sm" disabled>
                 on my favourites
               </button>
             </td>
@@ -19,11 +19,11 @@ export function UsersTable(props) {
         );
       } else {
         return (
-          <tr key={user.id}>
+          <tr className="hoverTable" key={user.id}>
             <td>{user.name}</td>
             <td>{user.email}</td>
             <td>{user.phoneNumber}</td>
-            <td>
+            <td className="right">
               <button
                 onClick={function () {
                   props.updateUsersList(user);

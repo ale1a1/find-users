@@ -77,7 +77,7 @@ export function MyProfile(props) {
             </tbody>
           </table>
           <button
-            className="btn btn-outline-warning btn-md ms-5"
+            className="btn btn-outline-warning btn-md ms-5 btn-sm"
             data-bs-toggle="modal"
             data-bs-target="#editProfileModal"
           >

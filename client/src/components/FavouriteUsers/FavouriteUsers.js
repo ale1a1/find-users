@@ -3,6 +3,8 @@ import { FavUsersList } from "./FavUsersList";
 import { FavouriteUsersService } from "../../libs/FavouritesUsersService";
 import { LoginRepository } from "../../libs/repository/LoginRepository";
 
+import "../../style.css";
+
 const favouriteUsersService = new FavouriteUsersService();
 const loginRepository = new LoginRepository();
 const owner = loginRepository.list()[0];
@@ -75,12 +77,12 @@ export class FavouriteUsers extends Component {
         <div className="container pt-5">
           <h3 className="text-light mt-5 mb-5">FAVOURITE USERS LIST</h3>
           <div className="table-responsive">
-            <table className="table  text-light w-75 mt-5 ms-5">
-              <thead>
+            <table className="table text-light w-75 mt-5 ms-5 align-middle table-borderless">
+              <thead className="table-light">
                 <tr>
                   <th>Username</th>
-                  <th>Email address</th>
-                  <th>Email address</th>
+                  <th>Email </th>
+                  <th>Phone </th>
                 </tr>
               </thead>
               <tbody>

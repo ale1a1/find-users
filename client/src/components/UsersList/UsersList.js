@@ -109,8 +109,8 @@ export function UsersList(props) {
             <thead className="table-light">
               <tr>
                 <th>Username</th>
-                <th>Email address</th>
-                <th>Phone number</th>
+                <th>Email</th>
+                <th>Phone</th>
               </tr>
             </thead>
             <tbody>

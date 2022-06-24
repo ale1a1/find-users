@@ -7,7 +7,7 @@ export function MainPage(props) {
     <Fragment>
       <div className="container text-light pt-5">
         <h3 className="mt-5 mb-5">FIND USERS WEB APPLICATION</h3>
-        <ul className="highMarginTop fs-4 ">
+        <ul className="highMarginTop fs-6 ">
           <li className="mt-3">
             <div className="d-flex align-items-center">
               Check the

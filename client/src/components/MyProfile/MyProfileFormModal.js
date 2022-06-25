@@ -55,12 +55,16 @@ export function MyProfileFormModal(props) {
     });
   };
 
+  // const closeHandler = () => {
+  //   const currentUser = loginRepository.list();
+  //   const currentUserEmail = { email: currentUser[0] };
+  //   usersService
+  //     .getCurrentUser(currentUserEmail)
+  //     .then((user) => props.updateUser(user));
+  // };
+
   const closeHandler = () => {
-    const currentUser = loginRepository.list();
-    const currentUserEmail = { email: currentUser[0] };
-    usersService
-      .getCurrentUser(currentUserEmail)
-      .then((user) => props.updateUser(user));
+    props.updateUser();
   };
 
   return (

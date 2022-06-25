@@ -38,8 +38,14 @@ export function MyProfile(props) {
 
   //////////////CASINO DEL LOP END OF TESTS
 
-  const updateUser = (updatedUser) => {
-    setCurrentUser(updatedUser);
+  // const updateUser = (updatedUser) => {
+  //   setCurrentUser(updatedUser);
+  // };
+
+  const updateUser = () => {
+    usersService
+      .getCurrentUser(currentUserEmail)
+      .then((user) => setCurrentUser(user));
   };
 
   const changeName = (name) => {

@@ -2,9 +2,9 @@ import React from "react";
 import "../../style.css";
 
 export function Footer() {
-  // const yearEl = document.querySelector(".year");
-  // const currentYear = new Date().getFullYear();
-  // yearEl.textContent = currentYear;
+  const yearEl = document.querySelector(".year");
+  const currentYear = new Date().getFullYear();
+  yearEl.textContent = currentYear;
 
   return (
     <footer

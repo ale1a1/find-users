@@ -16,7 +16,7 @@ export function Footer() {
     >
       <div className="row align-items-center px-3">
         <h2 className="col smallFontSize mt-2 mb-0 ms-xs-auto ms-sm-auto ms-lg-2 footerH2 font-monospace">
-          &copy; Copyright `${currentYear}`
+          &copy; Copyright {currentYear}
           <a
             className="text-decoration-none text-light ms-3"
             href="https://portfolio-ale1a184.herokuapp.com/#home"

@@ -2,9 +2,7 @@ import React from "react";
 import "../../style.css";
 
 export function Footer() {
-  const yearEl = document.querySelector("#year");
   const currentYear = new Date().getFullYear();
-  yearEl.textContent = currentYear;
 
   return (
     <footer
@@ -18,7 +16,7 @@ export function Footer() {
     >
       <div className="row align-items-center px-3">
         <h2 className="col smallFontSize mt-2 mb-0 ms-xs-auto ms-sm-auto ms-lg-2 footerH2 font-monospace">
-          &copy; Copyright <span id="year">20??</span>
+          &copy; Copyright `${currentYear}`
           <a
             className="text-decoration-none text-light ms-3"
             href="https://portfolio-ale1a184.herokuapp.com/#home"

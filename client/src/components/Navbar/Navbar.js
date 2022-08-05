@@ -1,6 +1,8 @@
 import { Fragment } from "react";
 import { LogoutRepository } from "../../libs/repository/LogoutRepository";
 
+import "../../queries.css";
+
 const logoutRepository = new LogoutRepository();
 
 export function Navbar(props) {
@@ -72,7 +74,7 @@ export function Navbar(props) {
             </ul>
             <a
               onClick={logOut}
-              className="btn btn-outline-dark btn-sm"
+              className="btn btn-outline-dark btn-sm btn-logout"
               href="/"
               role="button"
             >

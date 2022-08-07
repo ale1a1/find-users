@@ -6,12 +6,12 @@ import "../../queries.css";
 const logoutRepository = new LogoutRepository();
 
 export function Navbar(props) {
-  const logOut = () => {
-    logoutRepository.remove();
-    props.logoutHandler();
-  };
+  // const logOut = () => {
+  //   logoutRepository.remove();
+  //   props.logoutHandler();
+  // };
 
-  const logoutModalOpener = () => {
+  const logoutModalSwitcher = () => {
     const logoutModal = document.querySelector(".logoutModal");
     logoutModal.classList.toggle("show");
   };
@@ -78,11 +78,10 @@ export function Navbar(props) {
             </ul>
             <a
               // onClick={logOut}
-              className="btn btn-outline-dark btn-sm btn-logout"
+              className="btn btn-outline-dark btn-sm"
               // href="/"
-              href="#"
               role="button"
-              onClick={logoutModalOpener}
+              onClick={logoutModalSwitcher}
             >
               logout
             </a>

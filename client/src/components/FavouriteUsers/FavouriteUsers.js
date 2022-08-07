@@ -38,6 +38,11 @@ export class FavouriteUsers extends Component {
         .then((idList) => favouriteUsersService.getUsers(idList))
         .then((favUsers) => this.setState({ favouriteUsers: favUsers }));
     };
+
+    this.deleteFavModalSwitcher = () => {
+      const deleteFaveModal = document.querySelector(".deleteFavModal");
+      deleteFaveModal.classList.toggle("show");
+    };
   }
 
   // useEffect(() => {
@@ -89,6 +94,7 @@ export class FavouriteUsers extends Component {
                 <FavUsersList
                   users={this.state.favouriteUsers}
                   onRemove={this.onRemove}
+                  deleteFavModalSwitcher={this.deleteFavModalSwitcher}
                 />
               </tbody>
             </table>

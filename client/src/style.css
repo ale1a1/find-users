@@ -30,8 +30,10 @@
   align-self: flex-end !important;
 }
 
+/* //////////////////////////  LOGOUT MODAL ////////////////////////////////// */
+
 .logoutModal {
-  background-color: rgba(0, 0, 0, 0.753);
+  background-color: rgba(0, 0, 0, 0.801);
   position: fixed;
   top: 0px;
   left: 0px;
@@ -42,10 +44,23 @@
 }
 
 .logoutModalBox {
-  background-color: aquamarine;
+  background-color: whitesmoke;
   text-align: center;
-  width: 50%;
-  height: 50%;
+  width: 30%;
+  height: 40%;
+}
+
+.logoutModalBox h1 {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+.logoutModalBox p {
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+}
+
+.modal-btn {
+  margin: 2rem;
 }
 
 .show {
@@ -54,6 +69,49 @@
   justify-content: center;
   align-items: center;
 }
+
+/* //////////////////////////  DELETE FAV MODAL ////////////////////////////////// */
+
+.deleteFavModal {
+  background-color: rgba(0, 0, 0, 0.801);
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  display: none;
+  z-index: 10000;
+  height: 100vh;
+  width: 100vw;
+}
+
+.deleteFavModalBox {
+  color: black;
+  background-color: whitesmoke !important;
+  text-align: center;
+  width: 30%;
+  height: 40%;
+}
+
+.deleteFavModalBox h1 {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+.deleteFavModalBox p {
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+}
+
+.modal-btn {
+  margin: 2rem;
+}
+
+.show {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ////////////////////////////////////////////////////////////////////////////////////////////// */
 
 @media only screen and (max-width: 600px) {
   .footerH2 {

@@ -8,7 +8,7 @@ import { UsersList } from "../UsersList/UsersList";
 import { FavouriteUsers } from "../FavouriteUsers/FavouriteUsers";
 import { MyProfile } from "../MyProfile/MyProfile";
 import { Footer } from "../Footer/Footer";
-import { LogoutModal } from "../LogoutModal";
+import { LogoutModal } from "../Navbar/LogoutModal";
 
 import { LoginRepository } from "../../libs/repository/LoginRepository";
 
@@ -71,7 +71,7 @@ export function App() {
         </Router>
       </div>
       <Footer />
-      <LogoutModal />
+      <LogoutModal logoutHandler={logoutHandler} />
     </Fragment>
   );
 }

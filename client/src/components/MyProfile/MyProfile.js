@@ -3,6 +3,8 @@ import { MyProfileFormModal } from "./MyProfileFormModal";
 import { LoginRepository } from "../../libs/repository/LoginRepository";
 import { UsersService } from "../../libs/UsersService";
 
+import "../../style.css";
+
 const loginRepository = new LoginRepository();
 const usersService = new UsersService();
 
@@ -65,30 +67,32 @@ export function MyProfile(props) {
     <Fragment>
       <div className="container pt-5">
         <h3 className="text-light mt-5 mb-5">MY PROFILE </h3>
-        <div className="table-responsive">
-          <table className="table  text-light  w-50 mt-5 ms-5">
-            <tbody>
-              <tr>
-                <th scope="col">Username</th>
-                <td>{currentUser.name}</td>
-              </tr>
-              <tr>
-                <th scope="col">Email address</th>
-                <td>{currentUser.email}</td>
-              </tr>
-              <tr>
-                <th scope="col">Phone number</th>
-                <td>{currentUser.phoneNumber}</td>
-              </tr>
-            </tbody>
-          </table>
-          <button
-            className="btn btn-outline-warning btn-md ms-5 btn-sm"
-            data-bs-toggle="modal"
-            data-bs-target="#editProfileModal"
-          >
-            Edit
-          </button>
+        <div className="container-profile">
+          <div className="table-container">
+            <table className="table text-light  w-50 mt-5 ms-5">
+              <tbody>
+                <tr>
+                  <th scope="col">Username</th>
+                  <td>{currentUser.name}</td>
+                </tr>
+                <tr>
+                  <th scope="col">Email address</th>
+                  <td>{currentUser.email}</td>
+                </tr>
+                <tr>
+                  <th scope="col">Phone number</th>
+                  <td>{currentUser.phoneNumber}</td>
+                </tr>
+              </tbody>
+            </table>
+            <button
+              className="btn btn-outline-warning btn-md ms-5 btn-sm"
+              data-bs-toggle="modal"
+              data-bs-target="#editProfileModal"
+            >
+              Edit
+            </button>
+          </div>
         </div>
       </div>
       <MyProfileFormModal

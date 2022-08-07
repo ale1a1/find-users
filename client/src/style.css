@@ -113,6 +113,25 @@
 
 /* ////////////////////////////////////////////////////////////////////////////////////////////// */
 
+/* ////////////////////////////// PROFILE TABLE  /////////////////////////////// */
+
+.table-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  max-width: 45vw;
+}
+
+.container-profile {
+  margin: 5rem;
+}
+
+.table-container th {
+  min-width: 10rem;
+}
+
+/* ////////////////////////////////////////////////////////////////////////////////////////////// */
+
 @media only screen and (max-width: 600px) {
   .footerH2 {
     font-size: 0.8rem !important;

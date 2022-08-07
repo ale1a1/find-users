@@ -11,9 +11,13 @@ export function Navbar(props) {
     props.logoutHandler();
   };
 
+  const logoutModalOpener = () => {
+    const logoutModal = document.querySelector(".logoutModal");
+    logoutModal.classList.toggle("show");
+  };
+
   return (
     <Fragment>
-      return (
       <nav
         className={`${props.hidden} navbar navbar-expand-lg navbar-dark bg-danger fixed-top`}
       >
@@ -73,17 +77,18 @@ export function Navbar(props) {
               </li>
             </ul>
             <a
-              onClick={logOut}
+              // onClick={logOut}
               className="btn btn-outline-dark btn-sm btn-logout"
-              href="/"
+              // href="/"
+              href="#"
               role="button"
+              onClick={logoutModalOpener}
             >
               logout
             </a>
           </div>
         </div>
       </nav>
-      );
     </Fragment>
   );
 }

@@ -3,6 +3,8 @@ import { UsersService } from "../../libs/UsersService";
 import { LoginRepository } from "../../libs/repository/LoginRepository";
 import { LogoutRepository } from "../../libs/repository/LogoutRepository";
 
+import { MyProfileUpdatedModal } from "../MyProfile/MyProfileUpdatedModal";
+
 const loginRepository = new LoginRepository();
 const logoutRepository = new LogoutRepository();
 const usersService = new UsersService();
@@ -30,6 +32,13 @@ export function MyProfileFormModal(props) {
 
   //muovi quest logica in Myprofil??? e passala qui come state?????????
 
+  const myProfileUpdatedModalSwitcher = () => {
+    const myProfileUpdatedModal = document.querySelector(
+      ".myProfileUpdatedModal"
+    );
+    myProfileUpdatedModal.classList.toggle("show");
+  };
+
   const handler = (e) => {
     e.preventDefault();
     editUser(id, name, phoneNumber).then((response) => {
@@ -42,16 +51,19 @@ export function MyProfileFormModal(props) {
         setLabelErrorMessage(errors);
         console.log(labelErrorMessage);
       } else {
-        logoutRepository.remove();
-        loginRepository.save({
-          email: props.currentUser.email,
-          id: props.currentUser.id,
-        });
-        console.log(props.currentUser.id);
-        // props.updateUser(response.data.user)
-        alert("user profile updated!"); ///!!!!!NOT WORKING!!!!!!!!!!///
-        document.getElementById("myForm").submit();
+        myProfileUpdatedModalSwitcher();
       }
+      //  else {
+      //   logoutRepository.remove();
+      //   loginRepository.save({
+      //     email: props.currentUser.email,
+      //     id: props.currentUser.id,
+      //   });
+      //   console.log(props.currentUser.id);
+      //   // props.updateUser(response.data.user)
+      //   alert("user profile updated!"); ///!!!!!NOT WORKING!!!!!!!!!!///
+      //   document.getElementById("myForm").submit();
+      // }
     });
   };
 
@@ -65,6 +77,7 @@ export function MyProfileFormModal(props) {
 
   const closeHandler = () => {
     props.updateUser();
+    setLabelErrorMessage({});
   };
 
   return (
@@ -151,6 +164,7 @@ export function MyProfileFormModal(props) {
           </div>
         </div>
       </div>
+      <MyProfileUpdatedModal />
     </Fragment>
   );
 }

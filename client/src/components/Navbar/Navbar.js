@@ -53,7 +53,7 @@ export function Navbar(props) {
                   className="nav-link  text-uppercase"
                   href="/users"
                 >
-                  All Users
+                  Users list
                 </a>
               </li>
               <li className="nav-item">
@@ -62,7 +62,7 @@ export function Navbar(props) {
                   className="nav-link  text-uppercase"
                   href="/favourites"
                 >
-                  My favourite Users
+                  Favourites
                 </a>
               </li>
               <li className="nav-item">
@@ -71,7 +71,7 @@ export function Navbar(props) {
                   className="nav-link  text-uppercase"
                   href="/profile"
                 >
-                  My profile
+                  Profile
                   {/* My profile ({gamebuddyUsername}) */}
                 </a>
               </li>

@@ -23,20 +23,20 @@ export function LogoutModal(props) {
         <p>Are you sure you want to logout?</p>
         <a
           // onClick={logOut}
-          className="modal-btn modal-btn-yes btn btn-outline-dark btn-sm"
+          className="modal-btn modal-btn-yes btn btn-primary btn-sm"
           href="/"
           role="button"
           onClick={logOut}
         >
-          YES, logout now
+          YES
         </a>
         <a
           // onClick={logOut}
-          className="modal-btn modal-btn-no btn btn-outline-dark btn-sm"
+          className="modal-btn modal-btn-no btn btn-danger btn-sm"
           onClick={logoutModalSwitcher}
           role="button"
         >
-          NO, stay logged in
+          NO
         </a>
       </div>
     </div>

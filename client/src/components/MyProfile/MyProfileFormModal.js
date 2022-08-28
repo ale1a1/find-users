@@ -92,7 +92,7 @@ export function MyProfileFormModal(props) {
         <div className="modal-dialog modal-sm">
           <div className="modal-content bg-secondary fw-bold">
             <div className="modal-header">
-              <h4 className="modal-title text-white">EDIT YOUR PROFILE</h4>
+              <h4 className="modal-title text-white">EDIT PROFILE</h4>
               <button
                 className="btn-close bg-danger bg-danger"
                 type="button"

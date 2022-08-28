@@ -15,14 +15,16 @@ export function MyProfileUpdatedModal() {
   return (
     <div className="myProfileUpdatedModal">
       <div className="myProfileUpdatedModalBox">
-        <h1>SAVED!</h1>
-        <p>Click continue to close this window</p>
+        <h1>SAVED !</h1>
+        <p>
+          Click <em>continue</em> to close this window
+        </p>
         <a
-          className="modal-btn modal-btn-yes btn btn-outline-dark btn-sm"
+          className="modal-btn modal-btn-yes btn btn-primary btn-sm"
           role="button"
           onClick={continueClick}
         >
-          CONTINUE
+          Continue
         </a>
       </div>
     </div>

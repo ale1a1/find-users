@@ -90,7 +90,7 @@ export function LoginModal(props) {
                     type="submit"
                     // data-bs-dismiss="modal"
                   >
-                    Login
+                    LOGIN
                   </button>
                 </div>
               </form>

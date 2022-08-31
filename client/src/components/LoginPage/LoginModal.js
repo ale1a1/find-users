@@ -31,9 +31,9 @@ export function LoginModal(props) {
         aria-hidden="true"
       >
         <div className="modal-dialog modal-sm">
-          <div className="modal-content bg-secondary fw-bold">
-            <div className="modal-header">
-              <h4 className="modal-title text-white" id="getOfferLabel">
+          <div className="modal-content loginModal fw-bold">
+            <div className="modal-header loginModalHeader">
+              <h4 className="modal-title" id="getOfferLabel">
                 LOGIN
               </h4>
               <button
@@ -76,7 +76,7 @@ export function LoginModal(props) {
                   />
                 </div>
 
-                <div className="modal-footer">
+                <div className="modal-footer loginModalFooter">
                   <button
                     className="btn btn-danger mt-2"
                     type="button"

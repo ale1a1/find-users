@@ -90,9 +90,9 @@ export function MyProfileFormModal(props) {
         aria-hidden="true"
       >
         <div className="modal-dialog modal-sm">
-          <div className="modal-content bg-secondary fw-bold">
-            <div className="modal-header">
-              <h4 className="modal-title text-white">EDIT PROFILE</h4>
+          <div className="modal-content myProfileFormModal fw-bold">
+            <div className="modal-header myProfileFormModalHeader">
+              <h4 className="modal-title  ">EDIT PROFILE</h4>
               <button
                 className="btn-close bg-danger bg-danger"
                 type="button"
@@ -145,7 +145,7 @@ export function MyProfileFormModal(props) {
                   ></input>
                 </div>
 
-                <div className="modal-footer ">
+                <div className="modal-footer myProfileFormModalFooter">
                   <button
                     className="btn btn-danger mt-2"
                     type="button"

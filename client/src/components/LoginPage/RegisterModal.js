@@ -50,9 +50,9 @@ export function RegisterModal(props) {
         aria-hidden="true"
       >
         <div className="modal-dialog modal-sm">
-          <div className="modal-content bg-secondary fw-bold">
-            <div className="modal-header">
-              <h4 className="modal-title text-white">REGISTER</h4>
+          <div className="modal-content registerFormModal fw-bold">
+            <div className="modal-header registerFormModalHeader">
+              <h4 className="modal-title">REGISTER</h4>
               <button
                 className="btn-close bg-danger bg-danger"
                 type="button"
@@ -144,7 +144,7 @@ export function RegisterModal(props) {
                   ></input>
                 </div>
 
-                <div className="modal-footer ">
+                <div className="modal-footer registerFormModalFooter">
                   <button
                     className="btn btn-danger mt-2"
                     type="button"

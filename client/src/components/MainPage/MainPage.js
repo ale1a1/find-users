@@ -7,9 +7,14 @@ export function MainPage(props) {
     <Fragment>
       <div className="container text-light pt-5">
         <h3 className="mt-5 mb-5">FIND USERS WEB APPLICATION</h3>
-        <ul className="highMarginTop fs-6 ">
+        <ul className="highMarginTop fs-6 mainPageList">
           <li className="mt-3">
             <div className="d-flex align-items-center">
+              <ion-icon
+                name="search-outline"
+                size="large"
+                className="iconMainPage"
+              ></ion-icon>
               Check the
               <a
                 className="nav-link link-warning text-uppercase fw-bold"
@@ -21,6 +26,7 @@ export function MainPage(props) {
           </li>
           <li className="mt-3">
             <div className="d-flex align-items-center">
+              <ion-icon name="file-tray-full-outline" size="large"></ion-icon>
               Retrieve
               <a
                 className="nav-link link-warning text-uppercase fw-bold"
@@ -32,6 +38,7 @@ export function MainPage(props) {
           </li>
           <li className="mt-3">
             <div className="d-flex align-items-center">
+              <ion-icon name="save-outline" size="large"></ion-icon>
               Save your
               <a
                 className="nav-link link-warning text-uppercase fw-bold"
@@ -43,6 +50,7 @@ export function MainPage(props) {
           </li>
           <li className="mt-3">
             <div className="d-flex align-items-center">
+              <ion-icon name="person-outline" size="large"></ion-icon>
               Update
               <a
                 className="nav-link link-warning text-uppercase fw-bold"

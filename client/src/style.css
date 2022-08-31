@@ -30,6 +30,18 @@
   align-self: flex-end !important;
 }
 
+/* //////////////////////////  MAIN PAIGE ////////////////////////////////// */
+
+.mainPageList {
+  list-style: none;
+}
+
+ion-icon {
+  margin-right: 1rem;
+}
+
+/* ////////////////////////////////////////////////////////////////////////////////////////////// */
+
 /* //////////////////////////  LOGOUT MODAL ////////////////////////////////// */
 
 .logoutModal {
@@ -44,10 +56,10 @@
 }
 
 .logoutModalBox {
-  color: whitesmoke;
+  color: black;
   border: solid 1px black;
   border-radius: 2%;
-  background-color: rgb(108, 117, 125) !important;
+  background-color: #fff !important;
   text-align: center;
   width: 25%;
   height: 35%;
@@ -58,7 +70,7 @@
   margin-top: 0.5rem;
   margin-bottom: 1.5rem;
   padding-bottom: 1rem;
-  border-bottom: 1px solid whitesmoke;
+  border-bottom: 1px solid black;
 }
 .logoutModalBox p {
   padding: 1rem;
@@ -82,6 +94,8 @@
   align-items: center;
 }
 
+/* ////////////////////////////////////////////////////////////////////////////////////////////// */
+
 /* //////////////////////////  DELETE FAV MODAL ////////////////////////////////// */
 
 .deleteFavModal {
@@ -96,10 +110,10 @@
 }
 
 .deleteFavModalBox {
-  color: whitesmoke;
+  color: black;
   border: solid 1px black;
   border-radius: 2%;
-  background-color: rgb(108, 117, 125) !important;
+  background-color: #fff !important;
   text-align: center;
   width: 30%;
   height: 35%;
@@ -110,7 +124,7 @@
   margin-top: 0.5rem;
   margin-bottom: 1.5rem;
   padding-bottom: 1rem;
-  border-bottom: 1px solid whitesmoke;
+  border-bottom: 1px solid black;
 }
 .deleteFavModalBox p {
   padding: 1rem;
@@ -150,10 +164,10 @@
 }
 
 .myProfileUpdatedModalBox {
-  color: whitesmoke;
+  color: black;
   border: solid 1px black;
   border-radius: 2%;
-  background-color: rgb(108, 117, 125) !important;
+  background-color: #fff !important;
   text-align: center;
   width: 20%;
   height: 30%;
@@ -164,7 +178,7 @@
   margin-top: 0.5rem;
   margin-bottom: 1.5rem;
   padding-bottom: 1rem;
-  border-bottom: 1px solid whitesmoke;
+  border-bottom: 1px solid black;
 }
 .myProfileUpdatedModalBox p {
   padding: 1rem;
@@ -205,6 +219,54 @@
 
 .table-container th {
   min-width: 10rem;
+}
+
+/* ////////////////////////////////////////////////////////////////////////////////////////////// */
+
+/* //////////////////////////  MY PROFILE FORM MODAL ////////////////////////////////// */
+
+.myProfileFormModalHeader {
+  border-bottom: 1px solid black;
+}
+
+.myProfileFormModalHeader h4 {
+  font-size: 1.5rem;
+}
+
+.myProfileFormModalFooter {
+  border-top: none;
+}
+
+/* ////////////////////////////////////////////////////////////////////////////////////////////// */
+
+/* //////////////////////////  LOGIN MODAL ////////////////////////////////// */
+
+.loginModalHeader {
+  border-bottom: 1px solid black;
+}
+
+.loginModalHeader h4 {
+  font-size: 1.5rem;
+}
+
+.loginModalFooter {
+  border-top: none;
+}
+
+/* ////////////////////////////////////////////////////////////////////////////////////////////// */
+
+/* //////////////////////////  REGISTER FORM MODAL ////////////////////////////////// */
+
+.registerFormModalHeader {
+  border-bottom: 1px solid black;
+}
+
+.registerFormModalHeader h4 {
+  font-size: 1.5rem;
+}
+
+.registerFormModalFooter {
+  border-top: none;
 }
 
 /* ////////////////////////////////////////////////////////////////////////////////////////////// */

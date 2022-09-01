@@ -51,12 +51,12 @@ export function MainPage(props) {
           <li className="mt-3">
             <div className="d-flex align-items-center">
               <ion-icon name="person-outline" size="large"></ion-icon>
-              Update
+              Update your
               <a
                 className="nav-link link-warning text-uppercase fw-bold"
                 href="users"
               >
-                Your Profile Details
+                Profile Details
               </a>
             </div>
           </li>

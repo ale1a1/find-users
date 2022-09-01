@@ -5,20 +5,19 @@ import { RegisterModal } from "./RegisterModal";
 export function LoginPage(props) {
   return (
     <Fragment>
-      <div className="container pt-5">
-        <h3 className="text-light mt-5 mb-5">FIND USERS WEB APPLICATION</h3>
-        <ul>
-          <h5 className="text-light mt-3">
-            Find Users Web Application is a handy app that allows you to find
-            all the registered Users and get in touch with them !
-          </h5>
-          <h5 className="text-light mt-3">
-            Register to our app and login to get things started !
-          </h5>
-        </ul>
-        <div className="container mt-5">
+      <div className="container loginPageMainContent mx-auto pt-5 pb-5">
+        <h1 className="mt-5 mb-5 fw-bold text-warning text-center loginPageHeader">
+          FIND USERS WEB APPLICATION
+        </h1>
+        <h2 className="text-light mt-5 fs-2">
+          A handy app to find Users and get in touch with them.
+        </h2>
+        <h2 className="text-light mt-5 fs-2">
+          Register to our app and login to get things started.
+        </h2>
+        <div className="loginPageButtons">
           <button
-            className="btn btn-outline-warning mt-5 me-2"
+            className="btn btn-lg btn-outline-warning mx-5"
             type="button"
             data-bs-toggle="modal"
             data-bs-target="#loginModal"
@@ -27,7 +26,7 @@ export function LoginPage(props) {
             LOGIN
           </button>
           <button
-            className="btn btn-outline-success mt-5"
+            className="btn btn-lg btn-outline-success mx-5"
             type="button"
             data-bs-toggle="modal"
             data-bs-target="#registerModal"

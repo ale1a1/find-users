@@ -30,6 +30,24 @@
   align-self: flex-end !important;
 }
 
+/* //////////////////////////  LOGIN PAIGE ////////////////////////////////// */
+
+.loginPageMainContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.loginPageHeader {
+  font-size: 4rem;
+}
+
+.loginPageButtons {
+  display: flex;
+  margin-top: 8rem;
+}
+/* ////////////////////////////////////////////////////////////////////////////////////////////// */
+
 /* //////////////////////////  MAIN PAIGE ////////////////////////////////// */
 
 .mainPageList {

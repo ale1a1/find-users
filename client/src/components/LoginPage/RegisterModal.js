@@ -153,7 +153,7 @@ export function RegisterModal(props) {
                   >
                     Close
                   </button>
-                  <button className="btn btn-primary  mt-2" type="submit">
+                  <button className="btn btn-success  mt-2" type="submit">
                     REGISTER
                   </button>
                 </div>

@@ -86,7 +86,7 @@ export function LoginModal(props) {
                     Close
                   </button>
                   <button
-                    className="btn btn-primary mt-2"
+                    className="btn btn-warning mt-2"
                     type="submit"
                     // data-bs-dismiss="modal"
                   >

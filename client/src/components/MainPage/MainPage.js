@@ -9,14 +9,12 @@ export function MainPage(props) {
         <h1 className="mt-5 mb-5 fw-bold mainPageHeader">
           FIND USERS WEB APPLICATION
         </h1>
-        <ul className="highMarginTop fs-6 mainPageList">
+        <ul className="mt-5 fs-6 mainPageList">
           <li className="mt-3">
-            <div className="d-flex align-items-center">
-              <ion-icon
-                name="search-outline"
-                size="large"
-                className="iconMainPage"
-              ></ion-icon>
+            <div className="d-flex align-items-center fs-2">
+              <a href="users" className="iconMainPage">
+                <ion-icon name="search-outline" size="large"></ion-icon>
+              </a>
               Check the
               <a
                 className="nav-link link-warning text-uppercase fw-bold"
@@ -27,7 +25,7 @@ export function MainPage(props) {
             </div>
           </li>
           <li className="mt-3">
-            <div className="d-flex align-items-center">
+            <div className="d-flex align-items-center fs-2">
               <ion-icon name="file-tray-full-outline" size="large"></ion-icon>
               Retrieve
               <a
@@ -39,7 +37,7 @@ export function MainPage(props) {
             </div>
           </li>
           <li className="mt-3">
-            <div className="d-flex align-items-center">
+            <div className="d-flex align-items-center fs-2">
               <ion-icon name="save-outline" size="large"></ion-icon>
               Save your
               <a
@@ -51,7 +49,7 @@ export function MainPage(props) {
             </div>
           </li>
           <li className="mt-3">
-            <div className="d-flex align-items-center">
+            <div className="d-flex align-items-center fs-2">
               <ion-icon name="person-outline" size="large"></ion-icon>
               Update your
               <a

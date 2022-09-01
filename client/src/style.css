@@ -10,10 +10,7 @@
   background-image: url("../src/keyboard\ bg.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-}
-
-.highMarginTop {
-  margin-top: 5rem;
+  height: 100vh !important;
 }
 
 .smallFontSize {
@@ -64,12 +61,26 @@
 
 .mainPageList {
   list-style: none;
+  padding: 0;
+}
+
+.iconMainPage {
+  color: #fff;
 }
 
 ion-icon {
-  margin-right: 1rem;
+  margin-right: 2rem;
 }
 
+/* ////////////////////////////////////////////////////////////////////////////////////////////// */
+
+/* //////////////////////////  USERS LIST ////////////////////////////////// */
+.usersMainConent {
+  max-height: 100vh;
+}
+.usersTable {
+  max-height: 90vh;
+}
 /* ////////////////////////////////////////////////////////////////////////////////////////////// */
 
 /* //////////////////////////  LOGOUT MODAL ////////////////////////////////// */

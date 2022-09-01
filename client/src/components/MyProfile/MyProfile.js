@@ -66,7 +66,7 @@ export function MyProfile(props) {
   return (
     <Fragment>
       <div className="container pt-5">
-        <h3 className="text-light mt-5 mb-5">MY PROFILE </h3>
+        <h3 className="text-light mt-5 mb-5">PROFILE</h3>
         <div className="container-profile">
           <div className="table-container">
             <table className="table text-light  w-50 mt-5 ms-5">

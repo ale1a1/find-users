@@ -6,7 +6,7 @@ export function LoginPage(props) {
   return (
     <Fragment>
       <div className="container loginPageMainContent mx-auto pt-5 pb-5">
-        <h1 className="mt-5 mb-5 fw-bold text-warning text-center loginPageHeader">
+        <h1 className="mt-5 mb-5 fw-bold text-warning loginPageHeader">
           FIND USERS WEB APPLICATION
         </h1>
         <h2 className="text-light mt-5 fs-2">

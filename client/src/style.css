@@ -7,7 +7,9 @@
 }
 
 .main-content {
-  margin-bottom: 10rem;
+  background-image: url("../src/keyboard\ bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .highMarginTop {
@@ -50,6 +52,16 @@
 
 /* //////////////////////////  MAIN PAIGE ////////////////////////////////// */
 
+.mainPageMainContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.mainPageHeader {
+  font-size: 2.5rem;
+}
+
 .mainPageList {
   list-style: none;
 }
@@ -74,10 +86,13 @@ ion-icon {
 }
 
 .logoutModalBox {
-  color: black;
-  border: solid 1px black;
+  /* color: black; */
+  color: #fff;
+  /* border: solid 1px black; */
+  border: solid 0.5px rgb(221, 221, 221);
   border-radius: 2%;
-  background-color: #fff !important;
+  /* background-color: #fff !important; */
+  background-color: rgb(27, 27, 27) !important;
   text-align: center;
   width: 25%;
   height: 35%;
@@ -88,7 +103,8 @@ ion-icon {
   margin-top: 0.5rem;
   margin-bottom: 1.5rem;
   padding-bottom: 1rem;
-  border-bottom: 1px solid black;
+  /* border-bottom: 1px solid black; */
+  border-bottom: solid 0.5px rgb(221, 221, 221);
 }
 .logoutModalBox p {
   padding: 1rem;
@@ -96,7 +112,8 @@ ion-icon {
   margin-bottom: 0.5rem;
   margin-top: 2rem;
   font-size: 1.3rem;
-  color: black;
+  /* color: black; */
+  color: #fff;
 }
 
 .modal-btn {

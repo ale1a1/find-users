@@ -5,8 +5,10 @@ import "../../style.css";
 export function MainPage(props) {
   return (
     <Fragment>
-      <div className="container text-light pt-5">
-        <h3 className="mt-5 mb-5">FIND USERS WEB APPLICATION</h3>
+      <div className="container mainPageMainContent text-light pt-5">
+        <h1 className="mt-5 mb-5 fw-bold mainPageHeader">
+          FIND USERS WEB APPLICATION
+        </h1>
         <ul className="highMarginTop fs-6 mainPageList">
           <li className="mt-3">
             <div className="d-flex align-items-center">

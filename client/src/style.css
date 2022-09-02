@@ -106,19 +106,38 @@ ion-icon {
 
 /* ////////////////////////////// PROFILE TABLE  /////////////////////////////// */
 
+.profileMainContent {
+  height: 100vh;
+}
+
+.profileHeader {
+  font-size: 2rem;
+  margin-bottom: 5rem;
+}
+
+.container-profile {
+  margin: auto;
+}
+
 .table-container {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  max-width: 45vw;
-}
-
-.container-profile {
-  margin: 5rem;
+  max-width: 50%;
+  backdrop-filter: blur(2px);
+  margin: auto;
 }
 
 .table-container th {
   min-width: 10rem;
+  font-size: 1.5rem;
+  vertical-align: middle;
+}
+
+.table-container td {
+  font-size: 1.2rem;
+  font-style: italic;
+  vertical-align: middle;
 }
 
 /* ////////////////////////////////////////////////////////////////////////////////////////////// */

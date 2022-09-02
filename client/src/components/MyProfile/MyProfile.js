@@ -65,11 +65,11 @@ export function MyProfile(props) {
 
   return (
     <Fragment>
-      <div className="container pt-5">
-        <h3 className="text-light mt-5 mb-5">PROFILE</h3>
+      <div className="container pt-5 profileMainContent">
+        <h3 className="text-light mt-5 profileHeader">PROFILE</h3>
         <div className="container-profile">
           <div className="table-container">
-            <table className="table text-light  w-50 mt-5 ms-5">
+            <table className="table text-light mt-5 mb-5">
               <tbody>
                 <tr>
                   <th scope="col">Username</th>
@@ -86,7 +86,7 @@ export function MyProfile(props) {
               </tbody>
             </table>
             <button
-              className="btn btn-outline-warning btn-md ms-5 btn-sm"
+              className="btn btn-outline-warning  btn-lg"
               data-bs-toggle="modal"
               data-bs-target="#editProfileModal"
             >

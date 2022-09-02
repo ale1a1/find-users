@@ -3,6 +3,8 @@ import { FavUsersList } from "./FavUsersList";
 import { FavouriteUsersService } from "../../libs/FavouritesUsersService";
 import { LoginRepository } from "../../libs/repository/LoginRepository";
 
+import { DeleteUserModal } from "../FavouriteUsers/DeleteUserModal";
+
 import "../../style.css";
 
 const favouriteUsersService = new FavouriteUsersService();
@@ -15,6 +17,7 @@ export class FavouriteUsers extends Component {
     super(props);
     this.state = {
       favouriteUsers: [],
+      currentUser: { name: "mario" },
     };
 
     // this.removeFavourite = (user) => {
@@ -42,6 +45,11 @@ export class FavouriteUsers extends Component {
     this.deleteFavModalSwitcher = () => {
       const deleteFaveModal = document.querySelector(".deleteFavModal");
       deleteFaveModal.classList.toggle("show");
+    };
+
+    this.handleCurrentUser = (user) => {
+      this.setState({ currentUser: user });
+      console.log(user);
     };
   }
 
@@ -98,11 +106,17 @@ export class FavouriteUsers extends Component {
                   users={this.state.favouriteUsers}
                   onRemove={this.onRemove}
                   deleteFavModalSwitcher={this.deleteFavModalSwitcher}
+                  handleCurrentUser={this.handleCurrentUser}
                 />
               </tbody>
             </table>
           </div>
         </div>
+        <DeleteUserModal
+          user={this.state.currentUser}
+          onRemove={this.onRemove}
+          deleteFavModalSwitcher={this.deleteFavModalSwitcher}
+        />
       </Fragment>
     );
   }

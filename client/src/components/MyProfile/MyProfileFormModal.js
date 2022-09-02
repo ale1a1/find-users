@@ -89,8 +89,8 @@ export function MyProfileFormModal(props) {
         aria-labelledby="editProfileLabel"
         aria-hidden="true"
       >
-        <div className="modal-dialog modal-sm">
-          <div className="modal-content myProfileFormModal fw-bold">
+        <div className="modal-dialog">
+          <div className="modal-content myProfileFormModalBox fw-bold">
             <div className="modal-header myProfileFormModalHeader">
               <h4 className="modal-title  ">EDIT PROFILE</h4>
               <button
@@ -147,7 +147,7 @@ export function MyProfileFormModal(props) {
 
                 <div className="modal-footer myProfileFormModalFooter">
                   <button
-                    className="btn btn-danger mt-2"
+                    className="btn btn-outline-danger mt-2"
                     type="button"
                     data-bs-dismiss="modal"
                     onClick={closeHandler}
@@ -155,7 +155,10 @@ export function MyProfileFormModal(props) {
                     Close
                   </button>
                   {/* <button className="btn btn-primary  mt-2" type="submit"> */}
-                  <button className="btn btn-primary  mt-2" onClick={handler}>
+                  <button
+                    className="btn btn-outline-primary  mt-2"
+                    onClick={handler}
+                  >
                     SAVE
                   </button>
                 </div>

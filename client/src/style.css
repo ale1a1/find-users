@@ -215,10 +215,10 @@ ion-icon {
 }
 
 .deleteFavModalBox {
-  color: black;
+  color: #fff;
   border: solid 1px black;
   border-radius: 2%;
-  background-color: #fff !important;
+  background-color: rgb(27, 27, 27) !important;
   text-align: center;
   width: 30%;
   height: 35%;
@@ -229,7 +229,7 @@ ion-icon {
   margin-top: 0.5rem;
   margin-bottom: 1.5rem;
   padding-bottom: 1rem;
-  border-bottom: 1px solid black;
+  border-bottom: solid 0.5px rgb(221, 221, 221);
 }
 .deleteFavModalBox p {
   padding: 1rem;
@@ -237,7 +237,7 @@ ion-icon {
   margin-bottom: 0.5rem;
   margin-top: 2rem;
   font-size: 1.3rem;
-  color: black;
+  color: #fff;
 }
 
 .modal-btn {
@@ -269,10 +269,10 @@ ion-icon {
 }
 
 .myProfileUpdatedModalBox {
-  color: black;
+  color: #fff;
   border: solid 1px black;
   border-radius: 2%;
-  background-color: #fff !important;
+  background-color: rgb(27, 27, 27) !important;
   text-align: center;
   width: 20%;
   height: 30%;
@@ -283,7 +283,7 @@ ion-icon {
   margin-top: 0.5rem;
   margin-bottom: 1.5rem;
   padding-bottom: 1rem;
-  border-bottom: 1px solid black;
+  border-bottom: solid 0.5px rgb(221, 221, 221);
 }
 .myProfileUpdatedModalBox p {
   padding: 1rem;
@@ -291,7 +291,7 @@ ion-icon {
   margin-bottom: 0.5rem;
   margin-top: 2rem;
   font-size: 1.1rem;
-  color: black;
+  color: #fff;
 }
 
 .modal-btn {
@@ -311,8 +311,15 @@ ion-icon {
 
 /* //////////////////////////  MY PROFILE FORM MODAL ////////////////////////////////// */
 
+.myProfileFormModalBox {
+  background-color: rgb(27, 27, 27) !important;
+  color: #fff;
+  border-radius: 2%;
+  border: solid 1px black;
+}
+
 .myProfileFormModalHeader {
-  border-bottom: 1px solid black;
+  border-bottom: solid 0.5px rgb(221, 221, 221);
 }
 
 .myProfileFormModalHeader h4 {

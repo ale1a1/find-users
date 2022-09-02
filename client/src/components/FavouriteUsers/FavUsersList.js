@@ -4,11 +4,17 @@ import { DeleteUserModal } from "../FavouriteUsers/DeleteUserModal";
 
 import "../../style.css";
 
-export function FavUsersList({ users, onRemove, deleteFavModalSwitcher }) {
-  const [currentUser, setCurrentUser] = useState("");
+export function FavUsersList({
+  users,
+  onRemove,
+  deleteFavModalSwitcher,
+  handleCurrentUser,
+}) {
+  // const [currentUser, setCurrentUser] = useState("");
   const removeOptions = (user) => {
     deleteFavModalSwitcher();
-    setCurrentUser(user);
+    // setCurrentUser(user);
+    handleCurrentUser(user);
   };
   const favs = users.map((user) => (
     <Fragment>
@@ -36,11 +42,11 @@ export function FavUsersList({ users, onRemove, deleteFavModalSwitcher }) {
   return (
     <Fragment>
       {favs}
-      <DeleteUserModal
+      {/* <DeleteUserModal
         user={currentUser}
         onRemove={onRemove}
         deleteFavModalSwitcher={deleteFavModalSwitcher}
-      />
+      /> */}
     </Fragment>
   );
 }

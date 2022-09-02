@@ -11,15 +11,19 @@ export function DeleteUserModal(props) {
   };
 
   return (
-    <div className="deleteFavModal ">
+    <div className="deleteFavModal">
       <div className="deleteFavModalBox">
         <h1>REMOVE FAVOURITE</h1>
         <p>
-          Remove <b>{props.user.name}</b> from your favourites?
+          Remove{" "}
+          <em>
+            <b>{props.user.name}</b>
+          </em>{" "}
+          from your favourites?
         </p>
         <a
           // onClick={logOut}
-          className="modal-btn modal-btn-yes btn btn-primary btn-sm"
+          className="modal-btn modal-btn-yes btn btn-outline-primary btn-sm"
           role="button"
           onClick={deleteFav}
         >
@@ -27,7 +31,7 @@ export function DeleteUserModal(props) {
         </a>
         <a
           // onClick={logOut}
-          className="modal-btn modal-btn-no btn btn-danger btn-sm"
+          className="modal-btn modal-btn-no btn btn-outline-danger btn-sm"
           onClick={props.deleteFavModalSwitcher}
           role="button"
         >

@@ -49,8 +49,8 @@ export function RegisterModal(props) {
         aria-labelledby="registerLabel"
         aria-hidden="true"
       >
-        <div className="modal-dialog modal-sm">
-          <div className="modal-content registerFormModal fw-bold">
+        <div className="modal-dialog">
+          <div className="modal-content registerFormModalBox">
             <div className="modal-header registerFormModalHeader">
               <h4 className="modal-title">REGISTER</h4>
               <button
@@ -146,14 +146,17 @@ export function RegisterModal(props) {
 
                 <div className="modal-footer registerFormModalFooter">
                   <button
-                    className="btn btn-danger mt-2"
+                    className="btn btn-outline-danger mt-2"
                     type="button"
                     data-bs-dismiss="modal"
                     onClick={closeHandler}
                   >
                     Close
                   </button>
-                  <button className="btn btn-success  mt-2" type="submit">
+                  <button
+                    className="btn btn-outline-success  mt-2"
+                    type="submit"
+                  >
                     REGISTER
                   </button>
                 </div>

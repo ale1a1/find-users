@@ -41,6 +41,10 @@
   font-size: 4rem;
 }
 
+.container-h2 {
+  backdrop-filter: blur(2px);
+}
+
 .loginPageButtons {
   display: flex;
   margin-top: 8rem;
@@ -52,20 +56,26 @@
 .mainPageMainContent {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: start;
 }
 
 .mainPageHeader {
-  font-size: 2.5rem;
+  font-size: 2rem;
 }
 
 .mainPageList {
   list-style: none;
   padding: 0;
+  backdrop-filter: blur(2px);
+  margin: auto;
 }
 
 .iconMainPage {
   color: #fff;
+}
+
+.iconMainPage:hover {
+  color: #f0ad4e;
 }
 
 ion-icon {
@@ -81,6 +91,25 @@ ion-icon {
 .usersTable {
   max-height: 90vh;
 }
+/* ////////////////////////////////////////////////////////////////////////////////////////////// */
+
+/* ////////////////////////////// PROFILE TABLE  /////////////////////////////// */
+
+.table-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  max-width: 45vw;
+}
+
+.container-profile {
+  margin: 5rem;
+}
+
+.table-container th {
+  min-width: 10rem;
+}
+
 /* ////////////////////////////////////////////////////////////////////////////////////////////// */
 
 /* //////////////////////////  LOGOUT MODAL ////////////////////////////////// */
@@ -99,8 +128,8 @@ ion-icon {
 .logoutModalBox {
   /* color: black; */
   color: #fff;
-  /* border: solid 1px black; */
-  border: solid 0.5px rgb(221, 221, 221);
+  border: solid 1px black;
+  /* border: solid 0.5px rgb(221, 221, 221); */
   border-radius: 2%;
   /* background-color: #fff !important; */
   background-color: rgb(27, 27, 27) !important;
@@ -250,25 +279,6 @@ ion-icon {
 
 /* ////////////////////////////////////////////////////////////////////////////////////////////// */
 
-/* ////////////////////////////// PROFILE TABLE  /////////////////////////////// */
-
-.table-container {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  max-width: 45vw;
-}
-
-.container-profile {
-  margin: 5rem;
-}
-
-.table-container th {
-  min-width: 10rem;
-}
-
-/* ////////////////////////////////////////////////////////////////////////////////////////////// */
-
 /* //////////////////////////  MY PROFILE FORM MODAL ////////////////////////////////// */
 
 .myProfileFormModalHeader {
@@ -287,8 +297,15 @@ ion-icon {
 
 /* //////////////////////////  LOGIN MODAL ////////////////////////////////// */
 
+.loginModalBox {
+  background-color: rgb(27, 27, 27) !important;
+  color: #fff;
+  border-radius: 2%;
+  border: solid 1px black;
+}
+
 .loginModalHeader {
-  border-bottom: 1px solid black;
+  border-bottom: solid 0.5px rgb(221, 221, 221);
 }
 
 .loginModalHeader h4 {
@@ -303,8 +320,15 @@ ion-icon {
 
 /* //////////////////////////  REGISTER FORM MODAL ////////////////////////////////// */
 
+.registerFormModalBox {
+  background-color: rgb(27, 27, 27) !important;
+  color: #fff;
+  border-radius: 2%;
+  border: solid 1px black;
+}
+
 .registerFormModalHeader {
-  border-bottom: 1px solid black;
+  border-bottom: solid 0.5px rgb(221, 221, 221);
 }
 
 .registerFormModalHeader h4 {

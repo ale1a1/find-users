@@ -9,12 +9,15 @@ export function LoginPage(props) {
         <h1 className="mt-5 mb-5 fw-bold text-warning loginPageHeader">
           FIND USERS WEB APPLICATION
         </h1>
+        <div className="container-h2">
+
         <h2 className="text-light mt-5 fs-2">
           A handy app to find Users and get in touch with them.
         </h2>
         <h2 className="text-light mt-5 fs-2">
           Register to our app and login to get things started.
         </h2>
+        </div>
         <div className="loginPageButtons">
           <button
             className="btn btn-lg btn-outline-warning mx-5"

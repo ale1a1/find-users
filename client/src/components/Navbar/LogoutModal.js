@@ -23,7 +23,7 @@ export function LogoutModal(props) {
         <p>Are you sure you want to logout?</p>
         <a
           // onClick={logOut}
-          className="modal-btn modal-btn-yes btn btn-primary btn-sm"
+          className="modal-btn modal-btn-yes btn btn-outline-primary btn-sm"
           href="/"
           role="button"
           onClick={logOut}
@@ -32,7 +32,7 @@ export function LogoutModal(props) {
         </a>
         <a
           // onClick={logOut}
-          className="modal-btn modal-btn-no btn btn-danger btn-sm"
+          className="modal-btn modal-btn-no btn btn-outline-danger btn-sm"
           onClick={logoutModalSwitcher}
           role="button"
         >

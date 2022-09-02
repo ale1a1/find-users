@@ -30,8 +30,8 @@ export function LoginModal(props) {
         aria-labelledby="loginLabel"
         aria-hidden="true"
       >
-        <div className="modal-dialog modal-sm">
-          <div className="modal-content loginModal fw-bold">
+        <div className="modal-dialog">
+          <div className="modal-content loginModalBox">
             <div className="modal-header loginModalHeader">
               <h4 className="modal-title" id="getOfferLabel">
                 LOGIN
@@ -78,7 +78,7 @@ export function LoginModal(props) {
 
                 <div className="modal-footer loginModalFooter">
                   <button
-                    className="btn btn-danger mt-2"
+                    className="btn btn-outline-danger mt-2"
                     type="button"
                     data-bs-dismiss="modal"
                     onClick={closeHandler}
@@ -86,7 +86,7 @@ export function LoginModal(props) {
                     Close
                   </button>
                   <button
-                    className="btn btn-warning mt-2"
+                    className="btn btn-outline-warning mt-2"
                     type="submit"
                     // data-bs-dismiss="modal"
                   >

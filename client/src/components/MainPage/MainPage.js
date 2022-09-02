@@ -26,7 +26,9 @@ export function MainPage(props) {
           </li>
           <li className="mt-3">
             <div className="d-flex align-items-center fs-2">
-              <ion-icon name="file-tray-full-outline" size="large"></ion-icon>
+              <a href="users" className="iconMainPage">
+                <ion-icon name="file-tray-full-outline" size="large"></ion-icon>
+              </a>
               Retrieve
               <a
                 className="nav-link link-warning text-uppercase fw-bold"
@@ -38,11 +40,13 @@ export function MainPage(props) {
           </li>
           <li className="mt-3">
             <div className="d-flex align-items-center fs-2">
-              <ion-icon name="save-outline" size="large"></ion-icon>
+              <a href="favourites" className="iconMainPage">
+                <ion-icon name="save-outline" size="large"></ion-icon>
+              </a>
               Save your
               <a
                 className="nav-link link-warning text-uppercase fw-bold"
-                href="users"
+                href="favourites"
               >
                 Favourite Users
               </a>
@@ -50,11 +54,13 @@ export function MainPage(props) {
           </li>
           <li className="mt-3">
             <div className="d-flex align-items-center fs-2">
-              <ion-icon name="person-outline" size="large"></ion-icon>
+              <a href="profile" className="iconMainPage">
+                <ion-icon name="person-outline" size="large"></ion-icon>
+              </a>
               Update your
               <a
                 className="nav-link link-warning text-uppercase fw-bold"
-                href="users"
+                href="profile"
               >
                 Profile Details
               </a>

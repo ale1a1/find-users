@@ -80,14 +80,17 @@ export class FavouriteUsers extends Component {
     return (
       <Fragment>
         <div className="container pt-5">
-          <h3 className="text-light mt-5 mb-1">FAVOURITES</h3>
-          <div className="table-responsive">
-            <table className="table text-light w-75 mt-5 ms-5 align-middle">
+          <h3 className="text-light mt-5 mb-5 mb-1 usersListHeader">
+            FAVOURITES
+          </h3>
+          <div className="table-responsive usersTable">
+            <table className="table text-light w-75 ms-5 align-middle">
               <thead className="table-light">
                 <tr>
                   <th>Username</th>
                   <th>Email </th>
                   <th>Phone </th>
+                  <th></th>
                 </tr>
               </thead>
               <tbody>

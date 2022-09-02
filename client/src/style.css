@@ -21,10 +21,6 @@
   text-align: right;
 }
 
-.hoverTable:hover {
-  background-color: rgba(87, 22, 22, 0.815);
-}
-
 .nav-item {
   align-self: flex-end !important;
 }
@@ -85,12 +81,27 @@ ion-icon {
 /* ////////////////////////////////////////////////////////////////////////////////////////////// */
 
 /* //////////////////////////  USERS LIST ////////////////////////////////// */
-.usersMainConent {
-  max-height: 100vh;
+
+.usersListHeader {
+  font-size: 2rem;
 }
+
 .usersTable {
-  max-height: 90vh;
+  max-height: 63vh;
+  overflow: auto;
+  backdrop-filter: blur(2px);
 }
+
+.usersTable thead {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.hoverTable:hover {
+  background-color: black;
+}
+
 /* ////////////////////////////////////////////////////////////////////////////////////////////// */
 
 /* ////////////////////////////// PROFILE TABLE  /////////////////////////////// */

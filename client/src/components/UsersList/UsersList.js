@@ -102,15 +102,18 @@ export function UsersList(props) {
 
   return (
     <Fragment>
-      <div className="container usersMainContent pt-5">
-        <h3 className="text-light mt-5 mb-1">USERS LIST</h3>
+      <div className="container pt-5">
+        <h3 className="text-light mt-5 mb-5 mb-1 usersListHeader">
+          USERS LIST
+        </h3>
         <div className="table-responsive usersTable">
-          <table className="table text-light mt-5 w-75 ms-5 align-middle">
+          <table className="table table-fixed text-light w-75 ms-5 align-middle">
             <thead className="table-light">
               <tr>
                 <th>Username</th>
                 <th>Email</th>
                 <th>Phone</th>
+                <th></th>
               </tr>
             </thead>
             <tbody>

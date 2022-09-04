@@ -1,6 +1,8 @@
 import { useState, Fragment } from "react";
 import { UsersService } from "../../libs/UsersService";
 import { LoginRepository } from "../../libs/repository/LoginRepository";
+import "react-phone-number-input/style.css";
+import PhoneInput from "react-phone-number-input";
 
 const usersService = new UsersService();
 const loginRepository = new LoginRepository();
@@ -10,6 +12,7 @@ const addUser = usersService.addUser;
 export function RegisterModal(props) {
   const [form, setForm] = useState({});
   const [labelErrorMessage, setLabelErrorMessage] = useState({});
+  const [value, setValue] = useState();
 
   const IsLoggedIn = () => {
     props.loginHandler();
@@ -38,6 +41,10 @@ export function RegisterModal(props) {
 
   const closeHandler = () => {
     setForm({ name: "", email: "", password: "", phoneNumber: "" });
+  };
+
+  const eventPrinter = (e) => {
+    console.log(e);
   };
 
   return (
@@ -131,7 +138,14 @@ export function RegisterModal(props) {
                   {!labelErrorMessage.phoneNumber && (
                     <label className="col-form-label">phone number</label>
                   )}
-                  <input
+                  <PhoneInput
+                    placeholder="Enter phone number"
+                    className="form-control bg-dark text-white"
+                    value={form.phoneNumber}
+                    onChange={(e) => setForm({ ...form, phoneNumber: e })}
+                    required
+                  />
+                  {/* <input
                     type="number"
                     className="form-control bg-dark text-white"
                     name="phone number"
@@ -141,7 +155,7 @@ export function RegisterModal(props) {
                     }
                     value={form.phoneNumber}
                     required
-                  ></input>
+                  ></input> */}
                 </div>
 
                 <div className="modal-footer registerFormModalFooter">

@@ -1,8 +1,176 @@
 /**************************/
+/* BELOW 1344px (Smaller desktops) */
+/**************************/
+
+@media (max-width: 84em) {
+  /* //////////////////////////  LOGOUT MODAL ////////////////////////////////// */
+
+  .logoutModalBox h1 {
+    margin-bottom: 1rem !important;
+  }
+
+  .logoutModalBox p {
+    margin-top: 0.5rem !important;
+    font-size: 1.1rem !important;
+  }
+
+  /* ////////////////////////////////////////////////////////////////////////////////////////////// */
+
+  /* //////////////////////////  DELETE FAV MODAL ////////////////////////////////// */
+
+  .deleteFavModalBox h1 {
+    margin-bottom: 1rem !important;
+  }
+  .deleteFavModalBox p {
+    margin-top: 0.5rem !important;
+    font-size: 1.1rem !important;
+  }
+
+  /* ////////////////////////////////////////////////////////////////////////////////////////////// */
+
+  /* //////////////////////////  MY PROFILE UPDATED MODAL ////////////////////////////////// */
+
+  .myProfileUpdatedModalBox {
+    width: 30% !important;
+  }
+
+  .myProfileUpdatedModalBox h1 {
+    margin-bottom: 1rem !important;
+  }
+  .myProfileUpdatedModalBox p {
+    margin-top: 0.5rem !important;
+    font-size: 1.1rem !important;
+  }
+}
+/* ////////////////////////////////////////////////////////////////////////////////////////////// */
+
+/**************************/
+/* BELOW 1200px (Landscape Tablets) */
+/**************************/
+
+@media (max-width: 75em) {
+  .container {
+    max-width: 960px;
+  }
+
+  /* //////////////////////////  LOGIN PAIGE ////////////////////////////////// */
+
+  .loginPageHeader {
+    font-size: 2.8rem !important;
+  }
+
+  .container-h2 h2 {
+    font-size: 1.8rem !important;
+  }
+
+  .loginPageButtons {
+    margin-top: 5rem !important;
+  }
+
+  /* ////////////////////////////////////////////////////////////////////////////////////////////// */
+
+  /* //////////////////////////  MAIN PAIGE ////////////////////////////////// */
+
+  .mainPageHeader {
+    font-size: 1.7rem !important;
+    margin-left: 1.7rem !important;
+  }
+
+  .li-text-mainPage {
+    font-size: 1.7rem !important;
+  }
+
+  ion-icon {
+    margin-right: 1.7rem !important;
+  }
+
+  /* ////////////////////////////////////////////////////////////////////////////////////////////// */
+
+  /* //////////////////////////  USERS LIST ////////////////////////////////// */
+
+  .usersListHeader {
+    font-size: 1.7rem !important;
+    margin-left: 1.7rem !important;
+  }
+
+  .table {
+    width: 90% !important;
+  }
+
+  .usersTable {
+    max-height: 60vh !important;
+  }
+
+  .usersTable tr {
+    font-size: 1rem !important;
+  }
+  .usersTable button {
+    font-size: 1rem !important;
+  }
+
+  /* ////////////////////////////////////////////////////////////////////////////////////////////// */
+
+  /* ////////////////////////////// PROFILE TABLE  /////////////////////////////// */
+
+  .profileHeader {
+    font-size: 1.7rem !important;
+    margin-left: 1.7rem !important;
+  }
+
+  .table-container th {
+    font-size: 1.3rem !important;
+  }
+
+  .table-container td {
+    font-size: 1rem !important;
+    font-style: italic;
+    vertical-align: middle;
+  }
+
+  .table-container button {
+    font-size: 1rem !important;
+  }
+
+  /* ////////////////////////////////////////////////////////////////////////////////////////////// */
+
+  /* //////////////////////////  LOGOUT MODAL ////////////////////////////////// */
+
+  .logoutModalBox {
+    width: 35% !important;
+  }
+
+  /* ////////////////////////////////////////////////////////////////////////////////////////////// */
+
+  /* //////////////////////////  DELETE FAV MODAL ////////////////////////////////// */
+
+  .deleteFavModalBox {
+    width: 35% !important;
+  }
+
+  .deleteFavModalBox h1 {
+    margin-bottom: 1rem !important;
+  }
+  .deleteFavModalBox p {
+    margin-top: 0.5rem !important;
+    font-size: 1.1rem !important;
+  }
+
+  /* ////////////////////////////////////////////////////////////////////////////////////////////// */
+
+  /* //////////////////////////  MY PROFILE UPDATED MODAL ////////////////////////////////// */
+
+  .myProfileUpdatedModalBox {
+    width: 35% !important;
+  }
+
+  /* ////////////////////////////////////////////////////////////////////////////////////////////// */
+}
+
+/**************************/
 /* BELOW 992px  */
 /**************************/
 
-@media (max-width: 992px) {
+@media (max-width: 991px) {
   .navbar-collapse {
     display: flex;
     flex-direction: column;
@@ -13,4 +181,25 @@
   .navbar-nav {
     margin-right: 0 !important;
   }
+}
+
+/**************************/
+/* BELOW 944px (Tablets) */
+/**************************/
+
+@media (max-width: 59em) {
+}
+
+/**************************/
+/* BELOW 704px (Smaller tablets) */
+/**************************/
+
+@media (max-width: 44em) {
+}
+
+/**************************/
+/* BELOW 544px (Phones) */
+/**************************/
+
+@media (max-width: 34em) {
 }

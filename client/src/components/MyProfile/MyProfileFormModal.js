@@ -36,7 +36,7 @@ export function MyProfileFormModal(props) {
     const myProfileUpdatedModal = document.querySelector(
       ".myProfileUpdatedModal"
     );
-    myProfileUpdatedModal.classList.toggle("show");
+    myProfileUpdatedModal.classList.toggle("showModal");
   };
 
   const handler = (e) => {

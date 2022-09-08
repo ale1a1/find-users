@@ -5,7 +5,7 @@ export function MyProfileUpdatedModal() {
     const myProfileUpdatedModal = document.querySelector(
       ".myProfileUpdatedModal"
     );
-    myProfileUpdatedModal.classList.toggle("show");
+    myProfileUpdatedModal.classList.toggle("showModal");
   };
   const continueClick = () => {
     myProfileUpdatedModalSwitcher();

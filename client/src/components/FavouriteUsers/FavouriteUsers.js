@@ -44,7 +44,7 @@ export class FavouriteUsers extends Component {
 
     this.deleteFavModalSwitcher = () => {
       const deleteFaveModal = document.querySelector(".deleteFavModal");
-      deleteFaveModal.classList.toggle("show");
+      deleteFaveModal.classList.toggle("showModal");
     };
 
     this.handleCurrentUser = (user) => {

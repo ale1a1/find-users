@@ -2,6 +2,7 @@ import { useState, Fragment } from "react";
 import { UsersService } from "../../libs/UsersService";
 import { LoginRepository } from "../../libs/repository/LoginRepository";
 import "react-phone-number-input/style.css";
+
 import PhoneInput from "react-phone-number-input";
 
 const usersService = new UsersService();
@@ -12,7 +13,6 @@ const addUser = usersService.addUser;
 export function RegisterModal(props) {
   const [form, setForm] = useState({});
   const [labelErrorMessage, setLabelErrorMessage] = useState({});
-  const [value, setValue] = useState();
 
   const IsLoggedIn = () => {
     props.loginHandler();
@@ -41,10 +41,6 @@ export function RegisterModal(props) {
 
   const closeHandler = () => {
     setForm({ name: "", email: "", password: "", phoneNumber: "" });
-  };
-
-  const eventPrinter = (e) => {
-    console.log(e);
   };
 
   return (

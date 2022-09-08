@@ -13,7 +13,7 @@ export function Navbar(props) {
 
   const logoutModalSwitcher = () => {
     const logoutModal = document.querySelector(".logoutModal");
-    logoutModal.classList.toggle("show");
+    logoutModal.classList.toggle("showModal");
   };
 
   return (

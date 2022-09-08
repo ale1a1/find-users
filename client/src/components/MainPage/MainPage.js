@@ -11,7 +11,7 @@ export function MainPage(props) {
         </h1>
         <ul className="mt-5 fs-6 mainPageList">
           <li className="mt-3">
-            <div className="d-flex align-items-center fs-2">
+            <div className="d-flex align-items-center li-text-mainPage fs-2">
               <a href="users" className="iconMainPage">
                 <ion-icon name="search-outline" size="large"></ion-icon>
               </a>
@@ -25,7 +25,7 @@ export function MainPage(props) {
             </div>
           </li>
           <li className="mt-3">
-            <div className="d-flex align-items-center fs-2">
+            <div className="d-flex align-items-center li-text-mainPage fs-2">
               <a href="users" className="iconMainPage">
                 <ion-icon name="file-tray-full-outline" size="large"></ion-icon>
               </a>
@@ -39,7 +39,7 @@ export function MainPage(props) {
             </div>
           </li>
           <li className="mt-3">
-            <div className="d-flex align-items-center fs-2">
+            <div className="d-flex align-items-center li-text-mainPage fs-2">
               <a href="favourites" className="iconMainPage">
                 <ion-icon name="save-outline" size="large"></ion-icon>
               </a>
@@ -53,7 +53,7 @@ export function MainPage(props) {
             </div>
           </li>
           <li className="mt-3">
-            <div className="d-flex align-items-center fs-2">
+            <div className="d-flex align-items-center li-text-mainPage fs-2">
               <a href="profile" className="iconMainPage">
                 <ion-icon name="person-outline" size="large"></ion-icon>
               </a>

@@ -10,12 +10,12 @@ export function Footer() {
       w-100
       bg-dark-transparent
       text-light
-      text-lg-start text-md-center
+      text-lg-start 
       fixed-bottom
     "
     >
-      <div className="row align-items-center px-3">
-        <h2 className="col smallFontSize mt-2 mb-0 ms-xs-auto ms-sm-auto ms-lg-2 footerH2 font-monospace">
+      <div className="row align-items-center px-3 mainFooter">
+        <h2 className="col smallFontSize mt-2 mb-0 footerH2 font-monospace">
           &copy; Copyright {currentYear}
           <a
             className="text-decoration-none text-light ms-3"
@@ -24,7 +24,7 @@ export function Footer() {
             A.L.W. Media
           </a>
         </h2>
-        <div className="col ms-2 text-muted mt-sm-4 smallFontSize footerIcons">
+        <div className="col ms-2 text-muted mt-4 smallFontSize footerIcons">
           <ul className="list-unstyled d-flex flex-row justify-content-around px-5 me-1">
             <li>
               <a href="https://www.instagram.com/ale1a184/">

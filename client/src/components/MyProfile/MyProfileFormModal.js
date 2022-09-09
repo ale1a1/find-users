@@ -89,7 +89,7 @@ export function MyProfileFormModal(props) {
         aria-labelledby="editProfileLabel"
         aria-hidden="true"
       >
-        <div className="modal-dialog">
+        <div className="modal-dialog myProfileFormModal">
           <div className="modal-content myProfileFormModalBox fw-bold">
             <div className="modal-header myProfileFormModalHeader">
               <h4 className="modal-title  ">EDIT PROFILE</h4>

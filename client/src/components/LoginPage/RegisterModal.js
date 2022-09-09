@@ -52,7 +52,7 @@ export function RegisterModal(props) {
         aria-labelledby="registerLabel"
         aria-hidden="true"
       >
-        <div className="modal-dialog">
+        <div className="modal-dialog registerFormModal">
           <div className="modal-content registerFormModalBox">
             <div className="modal-header registerFormModalHeader">
               <h4 className="modal-title">REGISTER</h4>

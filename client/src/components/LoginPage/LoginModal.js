@@ -30,7 +30,7 @@ export function LoginModal(props) {
         aria-labelledby="loginLabel"
         aria-hidden="true"
       >
-        <div className="modal-dialog">
+        <div className="modal-dialog loginModal">
           <div className="modal-content loginModalBox">
             <div className="modal-header loginModalHeader">
               <h4 className="modal-title" id="getOfferLabel">

@@ -471,4 +471,166 @@
 /**************************/
 
 @media (max-width: 34em) {
+  .main-content {
+    padding: 0 2rem !important;
+  }
+  /* //////////////////////////  LOGIN PAIGE ////////////////////////////////// */
+
+  .loginPageHeader {
+    font-size: 1.8rem !important;
+    margin-top: 1rem !important;
+    margin-bottom: 2rem !important;
+    text-align: center !important;
+  }
+
+  .container-h2 {
+    padding: 0 0.5rem !important;
+  }
+  .container-h2 h2 {
+    font-size: 1.5rem !important;
+    margin-top: 3rem !important;
+  }
+
+  .loginPageButtons {
+    margin-top: 5rem !important;
+  }
+
+  .loginPageButtons button {
+    margin: 0 1.2rem !important;
+    font-size: 0.9rem !important;
+  }
+
+  /* ////////////////////////////////////////////////////////////////////////////////////////////// */
+
+  /* //////////////////////////  LOGIN MODAL ////////////////////////////////// */
+
+  .loginModal {
+    width: 50vw !important;
+    margin: auto !important;
+    margin-top: 8rem !important;
+  }
+
+  /* ////////////////////////////////////////////////////////////////////////////////////////////// */
+
+  /* //////////////////////////  REGISTER FORM MODAL ////////////////////////////////// */
+
+  .registerFormModal {
+    width: 50vw !important;
+    margin: auto !important;
+    margin-top: 2rem !important;
+  }
+
+  /* ////////////////////////////////////////////////////////////////////////////////////////////// */
+
+  /* //////////////////////////  MAIN PAIGE ////////////////////////////////// */
+
+  .mainPageHeader {
+    font-size: 1.4rem !important;
+    margin-left: 1.4rem !important;
+  }
+
+  .li-text-mainPage {
+    font-size: 1.3rem !important;
+  }
+
+  ion-icon {
+    margin-right: 1.3rem !important;
+  }
+
+  /* ////////////////////////////////////////////////////////////////////////////////////////////// */
+
+  /* //////////////////////////  USERS LIST ////////////////////////////////// */
+
+  .usersListHeader {
+    font-size: 1.4rem !important;
+    margin-left: 1.4rem !important;
+  }
+
+  .table {
+    width: 87% !important;
+  }
+
+  .usersTable {
+    max-height: 58vh !important;
+  }
+
+  .usersTable tr {
+    font-size: 0.8rem !important;
+  }
+  .usersTable button {
+    font-size: 0.7rem !important;
+  }
+
+  /* ////////////////////////////////////////////////////////////////////////////////////////////// */
+
+  /* ////////////////////////////// PROFILE TABLE  /////////////////////////////// */
+
+  .profileHeader {
+    margin-bottom: 3.5rem !important;
+  }
+
+  /* ////////////////////////////////////////////////////////////////////////////////////////////// */
+
+  /* //////////////////////////  MY PROFILE FORM MODAL ////////////////////////////////// */
+
+  .myProfileFormModal {
+    width: 50vw !important;
+    margin: auto !important;
+    margin-top: 8rem !important;
+  }
+
+  /* ////////////////////////////////////////////////////////////////////////////////////////////// */
+
+  /* //////////////////////////  MY PROFILE UPDATED MODAL ////////////////////////////////// */
+
+  .myProfileUpdatedModalBox {
+    width: 60% !important;
+  }
+
+  /* ////////////////////////////////////////////////////////////////////////////////////////////// */
+  /* //////////////////////////  LOGOUT MODAL ////////////////////////////////// */
+
+  .logoutModalBox {
+    width: 55% !important;
+  }
+
+  /* ////////////////////////////////////////////////////////////////////////////////////////////// */
+
+  /* //////////////////////////  DELETE FAV MODAL ////////////////////////////////// */
+
+  .deleteFavModalBox {
+    width: 60% !important;
+  }
+
+  /* ////////////////////////////////////////////////////////////////////////////////////////////// */
+
+  /* //////////////////////////  FOOTER ////////////////////////////////// */
+
+  .mainFooter {
+    display: flex !important;
+    flex-direction: column;
+    align-items: center !important;
+  }
+
+  .mainFooter ul {
+    padding-right: 0 !important;
+    padding-left: 0 !important;
+    margin-left: 0 !important;
+    margin-bottom: 0.5rem !important;
+  }
+
+  .footerIcons {
+    margin-top: 0.5rem !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+
+  .footerH2 {
+    font-size: 0.7rem !important;
+    margin: 0.5rem 0 !important;
+    padding: 0 !important;
+    text-align: center;
+  }
+
+  /* ////////////////////////////////////////////////////////////////////////////////////////////// */
 }

@@ -15,10 +15,10 @@ export function Footer() {
     "
     >
       <div className="row align-items-center px-3 mainFooter">
-        <h2 className="col smallFontSize mt-2 mb-0 footerH2 font-monospace">
+        <h2 className="col smallFontSize mt-2 mb-0 footerH2 font-monospace text-white-50">
           &copy; Copyright {currentYear}
           <a
-            className="text-decoration-none text-light ms-3"
+            className="text-decoration-none text-light ms-3 text-white-50"
             href="https://portfolio-ale1a184.herokuapp.com/#home"
           >
             A.L.W. Media

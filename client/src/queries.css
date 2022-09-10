@@ -473,11 +473,6 @@
 @media (max-width: 34em) {
   .main-content {
     padding: 0 2rem !important;
-    /* height: 100% !important; */
-  }
-
-  #root {
-    height: 100vh !important;
   }
 
   /* //////////////////////////  LOGIN PAIGE ////////////////////////////////// */
@@ -612,10 +607,6 @@
   /* ////////////////////////////////////////////////////////////////////////////////////////////// */
 
   /* //////////////////////////  FOOTER ////////////////////////////////// */
-
-  /* footer {
-    position: relative !important;
-  } */
 
   .mainFooter {
     display: flex !important;

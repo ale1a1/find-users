@@ -10,7 +10,7 @@
   background-image: url("../src/keyboard\ bg.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  height: 100vh !important;
+  height: 100vh;
 }
 
 .smallFontSize {

@@ -471,11 +471,6 @@
 /**************************/
 
 @media (max-width: 34em) {
-  .main-content {
-    padding: 0 2rem !important;
-    max-height: 90vh;
-  }
-
   /* //////////////////////////  LOGIN PAIGE ////////////////////////////////// */
 
   .loginPageHeader {

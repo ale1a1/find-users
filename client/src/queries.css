@@ -455,6 +455,7 @@
 @media (max-width: 34em) {
   .main-content {
     height: 87.5vh !important;
+    overflow-y: hidden !important;
   }
 
   /* //////////////////////////  LOGIN PAIGE ////////////////////////////////// */

@@ -6,9 +6,7 @@ export function MainPage(props) {
   return (
     <Fragment>
       <div className="container mainPageMainContent text-light pt-5">
-        <h1 className="mt-5 mb-5  mainPageHeader">
-          FIND USERS WEB APPLICATION
-        </h1>
+        <h1 className="mt-5 mb-5  mainPageHeader">HOME</h1>
         <ul className="mt-5 fs-6 mainPageList">
           <li className="mt-3">
             <div className="d-flex align-items-center li-text-mainPage fs-2">

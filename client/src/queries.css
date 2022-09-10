@@ -472,12 +472,9 @@
 
 @media (max-width: 34em) {
   .main-content {
-    height: 85vh !important;
+    height: 87.5vh !important;
   }
 
-  .mainPageMainContent {
-    height: 85vh !important;
-  }
   /* //////////////////////////  LOGIN PAIGE ////////////////////////////////// */
 
   .loginPageHeader {
@@ -612,7 +609,7 @@
   /* //////////////////////////  FOOTER ////////////////////////////////// */
 
   footer {
-    height: 15vh !important;
+    height: 12.5vh !important;
   }
 
   .mainFooter {

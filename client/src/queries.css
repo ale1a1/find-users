@@ -472,7 +472,11 @@
 
 @media (max-width: 34em) {
   .main-content {
-    height: auto !important;
+    height: 85vh !important;
+  }
+
+  .mainPageMainContent {
+    height: 85vh !important;
   }
   /* //////////////////////////  LOGIN PAIGE ////////////////////////////////// */
 
@@ -606,6 +610,10 @@
   /* ////////////////////////////////////////////////////////////////////////////////////////////// */
 
   /* //////////////////////////  FOOTER ////////////////////////////////// */
+
+  footer {
+    height: 15vh !important;
+  }
 
   .mainFooter {
     display: flex !important;

@@ -473,7 +473,11 @@
 @media (max-width: 34em) {
   .main-content {
     padding: 0 2rem !important;
-    height: 50vh !important;
+    /* height: 100% !important; */
+  }
+
+  #root {
+    height: 100vh !important;
   }
 
   /* //////////////////////////  LOGIN PAIGE ////////////////////////////////// */

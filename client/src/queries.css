@@ -529,6 +529,30 @@
   }
   /* ////////////////////////////////////////////////////////////////////////////////////////////// */
 
+  /* //////////////////////////  USERS LIST ////////////////////////////////// */
+  .usersListHeader {
+    font-size: 1.3rem !important;
+    margin-left: 0 !important;
+    text-align: center !important;
+  }
+
+  .table {
+    width: 87% !important;
+  }
+
+  .usersTable {
+    max-height: 58vh !important;
+  }
+
+  .usersTable tr {
+    font-size: 0.8rem !important;
+  }
+  .usersTable button {
+    font-size: 0.7rem !important;
+  }
+
+  /* ////////////////////////////////////////////////////////////////////////////////////////////// */
+
   /* ////////////////////////////// PROFILE TABLE  /////////////////////////////// */
 
   .profileHeader {

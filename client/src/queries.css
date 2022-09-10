@@ -475,6 +475,11 @@
     padding: 0 2rem !important;
     height: auto !important;
   }
+
+  #root {
+    height: 100% !important;
+  }
+
   /* //////////////////////////  LOGIN PAIGE ////////////////////////////////// */
 
   .loginPageHeader {

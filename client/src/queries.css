@@ -502,8 +502,11 @@
   /* //////////////////////////  DELETE FAV MODAL ////////////////////////////////// */
   .deleteFavModalBox {
     width: 90% !important;
+    height: 35% !important;
   }
   .deleteFavModalBox p {
+    margin-top: 1rem !important;
+    margin-bottom: 1.5rem !important;
     padding-right: 0.5rem !important;
     padding-left: 0.5rem !important;
   }
@@ -519,12 +522,14 @@
   /* //////////////////////////  MY PROFILE UPDATED MODAL ////////////////////////////////// */
   .myProfileUpdatedModalBox {
     width: 90% !important;
+    height: 30% !important;
   }
   /* ////////////////////////////////////////////////////////////////////////////////////////////// */
 
   /* //////////////////////////  LOGOUT MODAL ////////////////////////////////// */
   .logoutModalBox {
     width: 80% !important;
+    height: 30% !important;
   }
   /* ////////////////////////////////////////////////////////////////////////////////////////////// */
 

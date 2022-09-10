@@ -499,6 +499,34 @@
   }
   /* ////////////////////////////////////////////////////////////////////////////////////////////// */
 
+  /* //////////////////////////  MAIN PAIGE ////////////////////////////////// */
+  .mainPageHeader {
+    font-size: 1.3rem !important;
+    margin-left: 0 !important;
+    align-self: center !important;
+  }
+
+  .mainPageMainContent {
+    gap: 1.5rem !important;
+  }
+
+  .mainPageList {
+    margin-top: 0 !important;
+  }
+
+  .mainPageList li {
+    margin-top: 2.5rem !important;
+  }
+
+  .li-text-mainPage {
+    font-size: 1.1rem !important;
+  }
+
+  ion-icon {
+    margin-right: 1.22rem !important;
+  }
+  /* ////////////////////////////////////////////////////////////////////////////////////////////// */
+
   /* //////////////////////////  DELETE FAV MODAL ////////////////////////////////// */
   .deleteFavModalBox {
     width: 90% !important;

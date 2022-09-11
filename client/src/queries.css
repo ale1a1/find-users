@@ -665,7 +665,30 @@
 }
 
 /**************************/
-/* BELOW 450px hieight (mobile landscapes) */
+/* BELOW 680 px height (small mobile) */
+/**************************/
+
+@media (max-height: 42em) {
+  /* //////////////////////////  LOGIN PAIGE ////////////////////////////////// */
+  .loginPageHeader {
+    font-size: 2rem !important;
+    margin-bottom: 1rem !important;
+  }
+
+  .container-h2 h2 {
+    font-size: 1.5rem !important;
+    margin-top: 3rem !important;
+  }
+
+  .loginPageButtons {
+    margin-top: 3.5rem !important;
+  }
+
+  /* ////////////////////////////////////////////////////////////////////////////////////////////// */
+}
+
+/**************************/
+/* BELOW 450px height (mobile landscapes) */
 /**************************/
 
 @media (max-height: 28em) {

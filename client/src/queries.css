@@ -669,7 +669,4 @@
 /**************************/
 
 @media (max-height: 28em) {
-  body {
-    display: none !important;
-  }
 }

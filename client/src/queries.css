@@ -691,7 +691,7 @@
 /* BELOW 450px height (mobile landscapes) */
 /**************************/
 
-@media (max-height: 28em) {
+@media (max-height: 28em) and (orientation: landscape) {
   .main-content {
     height: 100vh !important;
   }
@@ -855,20 +855,6 @@
   .myProfileUpdatedModalBox {
     width: 50% !important;
     height: 62% !important;
-  }
-
-  /* ////////////////////////////////////////////////////////////////////////////////////////////// */
-}
-
-/**************************/
-/* BELOW 300px height (mobile with keaybord opened on display) */
-/**************************/
-
-@media (max-height: 19em) {
-  /* //////////////////////////  LOGIN MODAL ////////////////////////////////// */
-
-  .loginModal {
-    width: 60vw !important;
   }
 
   /* ////////////////////////////////////////////////////////////////////////////////////////////// */

@@ -25,6 +25,12 @@
   align-self: flex-end !important;
 }
 
+.PhoneInputInput {
+  background-color: #212529;
+  color: #fff;
+  border: none;
+}
+
 /* //////////////////////////  LOGIN PAIGE ////////////////////////////////// */
 
 .loginPageMainContent {

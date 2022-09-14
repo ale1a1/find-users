@@ -4,6 +4,7 @@ import { FavouriteUsersService } from "../../libs/FavouritesUsersService";
 import { LoginRepository } from "../../libs/repository/LoginRepository";
 
 import { DeleteUserModal } from "../FavouriteUsers/DeleteUserModal";
+import { NoFavs } from "./NoFavs";
 
 import "../../style.css";
 
@@ -85,32 +86,36 @@ export class FavouriteUsers extends Component {
   // }
 
   render() {
+    const favTable = (
+      <div className="table-responsive usersTable">
+        <table className="table text-light w-75 ms-5 align-middle">
+          <thead className="table-light">
+            <tr>
+              <th>Username</th>
+              <th>Email </th>
+              <th>Phone </th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+            <FavUsersList
+              users={this.state.favouriteUsers}
+              onRemove={this.onRemove}
+              deleteFavModalSwitcher={this.deleteFavModalSwitcher}
+              handleCurrentUser={this.handleCurrentUser}
+            />
+          </tbody>
+        </table>
+      </div>
+    );
+
     return (
       <Fragment>
         <div className="container pt-5">
           <h3 className="text-light mt-5 mb-5 mb-1 usersListHeader">
             FAVOURITES
           </h3>
-          <div className="table-responsive usersTable">
-            <table className="table text-light w-75 ms-5 align-middle">
-              <thead className="table-light">
-                <tr>
-                  <th>Username</th>
-                  <th>Email </th>
-                  <th>Phone </th>
-                  <th></th>
-                </tr>
-              </thead>
-              <tbody>
-                <FavUsersList
-                  users={this.state.favouriteUsers}
-                  onRemove={this.onRemove}
-                  deleteFavModalSwitcher={this.deleteFavModalSwitcher}
-                  handleCurrentUser={this.handleCurrentUser}
-                />
-              </tbody>
-            </table>
-          </div>
+          {this.state.favouriteUsers[0] ? favTable : <NoFavs />}
         </div>
         <DeleteUserModal
           user={this.state.currentUser}

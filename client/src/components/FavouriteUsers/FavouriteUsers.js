@@ -18,7 +18,9 @@ export class FavouriteUsers extends Component {
     super(props);
     this.state = {
       favouriteUsers: [],
-      currentUser: { name: "mario" },
+      // currentUser: { name: "mario" },
+      currentUser: {},
+      loader: true,
     };
 
     // this.removeFavourite = (user) => {
@@ -52,6 +54,10 @@ export class FavouriteUsers extends Component {
       this.setState({ currentUser: user });
       console.log(user);
     };
+
+    this.loaderFunct = () => {
+      this.setState({ loader: false });
+    };
   }
 
   // useEffect(() => {
@@ -72,11 +78,14 @@ export class FavouriteUsers extends Component {
   // }, []);
 
   componentDidMount() {
+    this.props.loaderSwitcher(true);
     favouriteUsersService
       .getUsersFromJunction(currentUserID)
       .then((users) => users.map((user) => parseInt(user.favUserID)))
       .then((idList) => favouriteUsersService.getUsers(idList))
-      .then((favUsers) => this.setState({ favouriteUsers: favUsers }));
+      .then((favUsers) => this.setState({ favouriteUsers: favUsers }))
+      .then(this.props.loaderSwitcher(false))
+      .then(setTimeout(this.loaderFunct, 400));
   }
 
   // componentDidMount() {
@@ -86,6 +95,7 @@ export class FavouriteUsers extends Component {
   // }
 
   render() {
+    const loader = this.state.loader;
     const favTable = (
       <div className="table-responsive usersTable">
         <table className="table text-light w-75 ms-5 align-middle">
@@ -109,7 +119,11 @@ export class FavouriteUsers extends Component {
       </div>
     );
 
-    return (
+    return loader ? (
+      <div className="loader-container">
+        <div className="spinner"></div>
+      </div>
+    ) : (
       <Fragment>
         <div className="container pt-5">
           <h3 className="text-light mt-5 mb-5 mb-1 usersListHeader">

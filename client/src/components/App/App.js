@@ -72,15 +72,30 @@ export function App() {
               <Route path="" element={home}></Route>
               <Route
                 path="/users"
-                element={<UsersList logoutHandler={logoutHandler} />}
+                element={
+                  <UsersList
+                    logoutHandler={logoutHandler}
+                    loaderSwitcher={loaderSwitcher}
+                  />
+                }
               ></Route>
               <Route
                 path="/favourites"
-                element={<FavouriteUsers logoutHandler={logoutHandler} />}
+                element={
+                  <FavouriteUsers
+                    logoutHandler={logoutHandler}
+                    loaderSwitcher={loaderSwitcher}
+                  />
+                }
               ></Route>
               <Route
                 path="/profile"
-                element={<MyProfile logoutHandler={logoutHandler} />}
+                element={
+                  <MyProfile
+                    logoutHandler={logoutHandler}
+                    loaderSwitcher={loaderSwitcher}
+                  />
+                }
               ></Route>
             </Routes>
           </Router>

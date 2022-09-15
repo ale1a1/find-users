@@ -1,9 +1,23 @@
-import { Fragment } from "react";
+import { Fragment, useState, useEffect } from "react";
 
 import "../../style.css";
 
 export function MainPage(props) {
-  return (
+  const [loader, setLoader] = useState(true);
+
+  const loaderFunct = () => {
+    setLoader(false);
+  };
+
+  useEffect(() => {
+    setTimeout(loaderFunct, 400);
+  }, []);
+
+  return loader ? (
+    <div className="loader-container">
+      <div className="spinner"></div>
+    </div>
+  ) : (
     <Fragment>
       <div className="container mainPageMainContent text-light pt-5">
         <h1 className="mt-5 mb-5  mainPageHeader">HOME</h1>

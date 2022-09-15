@@ -10,16 +10,24 @@ const usersService = new UsersService();
 
 export function MyProfile(props) {
   const [currentUser, setCurrentUser] = useState({});
+  const [loader, setLoader] = useState(true);
 
   //////////////CASINO DEL LOP START OF TESTS
 
   const retrievedUser = loginRepository.list();
   const currentUserEmail = { email: retrievedUser[0].email };
 
+  const loaderFunct = () => {
+    setLoader(false);
+  };
+
   useEffect(() => {
+    props.loaderSwitcher(true);
     usersService
       .getCurrentUser(currentUserEmail)
-      .then((user) => setCurrentUser(user));
+      .then((user) => setCurrentUser(user))
+      .then(props.loaderSwitcher(false))
+      .then(setTimeout(loaderFunct, 400));
   }, []);
 
   // const retrievedUser = loginRepository.list();
@@ -63,7 +71,11 @@ export function MyProfile(props) {
     console.log(currentUser);
   };
 
-  return (
+  return loader ? (
+    <div className="loader-container">
+      <div className="spinner"></div>
+    </div>
+  ) : (
     <Fragment>
       <div className="container pt-5 profileMainContent">
         <h3 className="text-light mt-5 profileHeader">PROFILE</h3>

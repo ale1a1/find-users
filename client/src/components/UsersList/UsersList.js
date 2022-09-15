@@ -22,6 +22,7 @@ export function UsersList(props) {
 
   const [usersList, setUsers] = useState([]);
   const [favouriteUsersList, setFavouriteUsersList] = useState([]);
+  const [loader, setLoader] = useState(true);
 
   const currentUserID = loginRepository.list()[0].id;
   const currentUserEmail = loginRepository.list()[0].email;
@@ -45,7 +46,12 @@ export function UsersList(props) {
     setUsers(updatedUsers);
   };
 
+  const loaderFunct = () => {
+    setLoader(false);
+  };
+
   useEffect(() => {
+    props.loaderSwitcher(true);
     usersService.getUsers().then((users) => setUsers(users));
     // favouriteUsersService
     //   .getUsersFromJunction(currentUserID)
@@ -56,7 +62,9 @@ export function UsersList(props) {
       .getUsersFromJunction(currentUserID)
       .then((users) => users.map((user) => parseInt(user.favUserID)))
       .then((idList) => favouriteUsersService.getUsers(idList))
-      .then((favUsers) => setFavouriteUsersList(favUsers));
+      .then((favUsers) => setFavouriteUsersList(favUsers))
+      .then(props.loaderSwitcher(false))
+      .then(setTimeout(loaderFunct, 400));
     // favouriteUsersService
     //   .getUsers(favUsersJunctionIdList)
     //   .then((favouriteUsers) => setFavouriteUsersList(favouriteUsers));
@@ -100,7 +108,11 @@ export function UsersList(props) {
     favUsersFunction();
   };
 
-  return (
+  return loader ? (
+    <div className="loader-container">
+      <div className="spinner"></div>
+    </div>
+  ) : (
     <Fragment>
       <div className="container pt-5">
         <h3 className="text-light mt-5 mb-5 mb-1 usersListHeader">

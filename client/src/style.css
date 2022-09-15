@@ -197,7 +197,7 @@ ion-icon {
 .logoutModalBox {
   /* color: black; */
   color: #fff;
-  border: solid 1px black;
+  border: solid 1px #ffc107;
   /* border: solid 0.5px rgb(221, 221, 221); */
   border-radius: 2%;
   /* background-color: #fff !important; */
@@ -213,7 +213,7 @@ ion-icon {
   margin-bottom: 1.5rem;
   padding-bottom: 1rem;
   /* border-bottom: 1px solid black; */
-  border-bottom: solid 0.5px rgb(221, 221, 221);
+  border-bottom: solid 0.5px #ffc107;
 }
 .logoutModalBox p {
   padding: 1rem;

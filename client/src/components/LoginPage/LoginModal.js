@@ -2,6 +2,8 @@ import { Fragment, useState } from "react";
 import { UsersService } from "../../libs/UsersService";
 import { LoginRepository } from "../../libs/repository/LoginRepository";
 
+import "../../style.css";
+
 const usersService = new UsersService();
 const logingRepository = new LoginRepository();
 
@@ -10,7 +12,9 @@ export function LoginModal(props) {
   const [password, setPassword] = useState();
 
   const login = async (email, password) => {
+    props.loaderSwitcher(true);
     await usersService.loginUser(email, password).then((user) => {
+      props.loaderSwitcher(false);
       if (user) props.loginHandler();
       logingRepository.save({ email: user.email, id: user.id });
     });

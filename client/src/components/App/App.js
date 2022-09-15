@@ -18,6 +18,11 @@ const loginRepository = new LoginRepository();
 
 export function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [loading, setLoading] = useState(false);
+
+  const loaderSwitcher = (parameter) => {
+    setLoading(parameter);
+  };
 
   const logoutHandler = () => {
     setIsLoggedIn(false);
@@ -25,6 +30,7 @@ export function App() {
 
   const loginHandler = () => {
     setIsLoggedIn(true);
+    console.log(loading);
     window.location.reload(false);
   };
 
@@ -39,7 +45,11 @@ export function App() {
   const home = isLoggedIn ? (
     <MainPage logoutHandler={logoutHandler} />
   ) : (
-    <LoginPage isLoggedIn={isLoggedIn} loginHandler={loginHandler} />
+    <LoginPage
+      isLoggedIn={isLoggedIn}
+      loginHandler={loginHandler}
+      loaderSwitcher={loaderSwitcher}
+    />
   );
 
   const navBar = isLoggedIn ? (
@@ -52,23 +62,29 @@ export function App() {
     <Fragment>
       {navBar}
       <div className="main-content">
-        <Router>
-          <Routes>
-            <Route path="" element={home}></Route>
-            <Route
-              path="/users"
-              element={<UsersList logoutHandler={logoutHandler} />}
-            ></Route>
-            <Route
-              path="/favourites"
-              element={<FavouriteUsers logoutHandler={logoutHandler} />}
-            ></Route>
-            <Route
-              path="/profile"
-              element={<MyProfile logoutHandler={logoutHandler} />}
-            ></Route>
-          </Routes>
-        </Router>
+        {loading ? (
+          <div className="loader-container">
+            <div className="spinner"></div>
+          </div>
+        ) : (
+          <Router>
+            <Routes>
+              <Route path="" element={home}></Route>
+              <Route
+                path="/users"
+                element={<UsersList logoutHandler={logoutHandler} />}
+              ></Route>
+              <Route
+                path="/favourites"
+                element={<FavouriteUsers logoutHandler={logoutHandler} />}
+              ></Route>
+              <Route
+                path="/profile"
+                element={<MyProfile logoutHandler={logoutHandler} />}
+              ></Route>
+            </Routes>
+          </Router>
+        )}
       </div>
       <Footer />
       <LogoutModal logoutHandler={logoutHandler} />

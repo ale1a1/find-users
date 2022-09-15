@@ -76,12 +76,16 @@ export function RegisterModal(props) {
                     </label>
                   )}
                   {!labelErrorMessage.username && (
-                    <label className="col-form-label">username</label>
+                    <label className="col-form-label">
+                      username (between 8 and 20 characters)
+                    </label>
                   )}
                   <input
                     type="text"
                     className="form-control bg-dark text-white"
                     name="username"
+                    minLength="8"
+                    maxLength="20"
                     placeholder="Create your username"
                     onChange={(e) => setForm({ ...form, name: e.target.value })}
                     value={form.name}
@@ -112,9 +116,13 @@ export function RegisterModal(props) {
                 </div>
 
                 <div className="mb-3">
-                  <label className="col-form-label">password</label>
+                  <label className="col-form-label">
+                    password (between 8 and 16 characthers)
+                  </label>
                   <input
                     type="password"
+                    minLength="8"
+                    maxLength="16"
                     className="form-control bg-dark text-white"
                     name="password"
                     placeholder="Create your password"
@@ -136,6 +144,7 @@ export function RegisterModal(props) {
                   )}
                   <PhoneInput
                     placeholder="Enter phone number"
+                    maxLength="20"
                     className="form-control bg-dark text-white"
                     value={form.phoneNumber}
                     onChange={(e) => setForm({ ...form, phoneNumber: e })}

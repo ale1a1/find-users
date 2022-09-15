@@ -10,13 +10,12 @@ export function LoginPage(props) {
           FIND USERS WEB APPLICATION
         </h1>
         <div className="container-h2">
-
-        <h2 className="text-light mt-5 fs-2">
-          A handy app to find Users and get in touch with them.
-        </h2>
-        <h2 className="text-light mt-5 fs-2">
-          Register to our app and login to get things started.
-        </h2>
+          <h2 className="text-light mt-5 fs-2">
+            A handy app to find Users and get in touch with them.
+          </h2>
+          <h2 className="text-light mt-5 fs-2">
+            Register to our app and login to get things started.
+          </h2>
         </div>
         <div className="loginPageButtons">
           <button
@@ -43,6 +42,7 @@ export function LoginPage(props) {
       <LoginModal
         isLoggedIn={props.isLoggedIn}
         loginHandler={props.loginHandler}
+        loaderSwitcher={props.loaderSwitcher}
       />
       <RegisterModal
         isLoggedIn={props.isLoggedIn}

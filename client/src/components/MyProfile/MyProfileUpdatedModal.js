@@ -20,7 +20,7 @@ export function MyProfileUpdatedModal() {
           Click <em>continue</em> to close this window
         </p>
         <a
-          className="modal-btn modal-btn-yes btn btn-outline-primary btn-sm"
+          className="modal-btn modal-btn-yes btn btn-outline-success btn-sm"
           role="button"
           onClick={continueClick}
         >

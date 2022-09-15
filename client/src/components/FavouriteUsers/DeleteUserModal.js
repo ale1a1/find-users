@@ -23,7 +23,7 @@ export function DeleteUserModal(props) {
         </p>
         <a
           // onClick={logOut}
-          className="modal-btn modal-btn-yes btn btn-outline-primary btn-sm"
+          className="modal-btn modal-btn-yes btn btn-outline-success btn-sm"
           role="button"
           onClick={deleteFav}
         >

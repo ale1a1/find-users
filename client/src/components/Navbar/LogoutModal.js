@@ -32,7 +32,7 @@ export function LogoutModal(props) {
         </a>
         <a
           // onClick={logOut}
-          className="modal-btn modal-btn-no btn btn-outline-warning btn-sm"
+          className="modal-btn modal-btn-no btn btn-outline-danger btn-sm"
           onClick={logoutModalSwitcher}
           role="button"
         >

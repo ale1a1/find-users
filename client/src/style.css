@@ -197,7 +197,7 @@ ion-icon {
 .logoutModalBox {
   /* color: black; */
   color: #fff;
-  border: solid 0.5px #ffc107;
+  border: solid 0.5px #ffc10754;
   /* border: solid 0.5px rgb(221, 221, 221); */
   border-radius: 2%;
   /* background-color: #fff !important; */
@@ -213,7 +213,7 @@ ion-icon {
   margin-bottom: 1.5rem;
   padding-bottom: 1rem;
   /* border-bottom: 1px solid black; */
-  border-bottom: solid 0.5px #ffc107;
+  border-bottom: solid 0.5px #ffc10754;
 }
 .logoutModalBox p {
   padding: 1rem;
@@ -255,7 +255,7 @@ ion-icon {
 
 .deleteFavModalBox {
   color: #fff;
-  border: solid 1px black;
+  border: solid 0.5px #ffc10754;
   border-radius: 2%;
   background-color: rgb(27, 27, 27) !important;
   text-align: center;
@@ -268,7 +268,7 @@ ion-icon {
   margin-top: 0.5rem;
   margin-bottom: 1.5rem;
   padding-bottom: 1rem;
-  border-bottom: solid 0.5px rgb(221, 221, 221);
+  border-bottom: solid 0.5px #ffc10754;
 }
 .deleteFavModalBox p {
   padding: 1rem;
@@ -309,7 +309,7 @@ ion-icon {
 
 .myProfileUpdatedModalBox {
   color: #fff;
-  border: solid 1px black;
+  border: solid 0.5px #ffc10754;
   border-radius: 2%;
   background-color: rgb(27, 27, 27) !important;
   text-align: center;
@@ -322,7 +322,7 @@ ion-icon {
   margin-top: 0.5rem;
   margin-bottom: 1.5rem;
   padding-bottom: 1rem;
-  border-bottom: solid 0.5px rgb(221, 221, 221);
+  border-bottom: solid 0.5px #ffc10754;
 }
 .myProfileUpdatedModalBox p {
   padding: 1rem;
@@ -354,11 +354,11 @@ ion-icon {
   background-color: rgb(27, 27, 27) !important;
   color: #fff;
   border-radius: 2%;
-  border: solid 1px black;
+  border: solid 0.5px #ffc10754;
 }
 
 .myProfileFormModalHeader {
-  border-bottom: solid 0.5px rgb(221, 221, 221);
+  border-bottom: solid 0.5px #ffc10754;
 }
 
 .myProfileFormModalHeader h4 {
@@ -377,11 +377,11 @@ ion-icon {
   background-color: rgb(27, 27, 27) !important;
   color: #fff;
   border-radius: 2%;
-  border: solid 1px black;
+  border: solid 0.5px #ffc10754;
 }
 
 .loginModalHeader {
-  border-bottom: solid 0.5px rgb(221, 221, 221);
+  border-bottom: solid 0.5px #ffc10754;
 }
 
 .loginModalHeader h4 {
@@ -400,11 +400,11 @@ ion-icon {
   background-color: rgb(27, 27, 27) !important;
   color: #fff;
   border-radius: 2%;
-  border: solid 1px black;
+  border: solid 0.5px #ffc10754;
 }
 
 .registerFormModalHeader {
-  border-bottom: solid 0.5px rgb(221, 221, 221);
+  border-bottom: solid 0.5px #ffc10754;
 }
 
 .registerFormModalHeader h4 {

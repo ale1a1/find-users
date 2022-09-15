@@ -156,7 +156,7 @@ export function MyProfileFormModal(props) {
                   </button>
                   {/* <button className="btn btn-primary  mt-2" type="submit"> */}
                   <button
-                    className="btn btn-outline-primary  mt-2"
+                    className="btn btn-outline-success  mt-2"
                     onClick={handler}
                   >
                     SAVE

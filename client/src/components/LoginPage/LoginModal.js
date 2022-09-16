@@ -10,13 +10,20 @@ const logingRepository = new LoginRepository();
 export function LoginModal(props) {
   const [email, setEmail] = useState();
   const [password, setPassword] = useState();
+  const [loginError, setLoginError] = useState("");
 
   const login = async (email, password) => {
-    props.loaderSwitcher(true);
+    // props.loaderSwitcher(true);
     await usersService.loginUser(email, password).then((user) => {
-      props.loaderSwitcher(false);
-      if (user) props.loginHandler();
-      logingRepository.save({ email: user.email, id: user.id });
+      // props.loaderSwitcher(false);
+      if (user.message !== "error") {
+        props.loginHandler();
+        logingRepository.save({ email: user.email, id: user.id });
+      } else {
+        setLoginError("Wrong password or wrong email. Try again!");
+        console.log(loginError);
+        console.log(user.message);
+      }
     });
   };
 
@@ -56,7 +63,9 @@ export function LoginModal(props) {
                 }}
               >
                 <div className="mb-3">
-                  <label className="col-form-label">email address</label>
+                  <label className="col-form-label cssBold">
+                    email address
+                  </label>
                   <input
                     type="text"
                     className="form-control bg-dark text-white"
@@ -79,7 +88,14 @@ export function LoginModal(props) {
                     required
                   />
                 </div>
-
+                <div className="mb-3">
+                  <a href="" className="forgotPassword">
+                    Forgot password?
+                  </a>
+                </div>
+                <div className="mb-3">
+                  <p>{loginError}</p>
+                </div>
                 <div className="modal-footer loginModalFooter">
                   <button
                     className="btn btn-outline-danger mt-2"

@@ -44,8 +44,18 @@ class UserController {
         password: request.password,
       },
     });
-    res.send(user);
-    console.debug(user);
+    // console.log(user);
+    // res.send(user);
+    if (user !== null) {
+      res.send(user);
+      console.log(user);
+    } else {
+      const error = { message: "error" };
+      res.send(error);
+      console.log(error);
+    }
+    // res.send(user);
+    // console.debug(user);
   }
   // register(req, res) {
   //   console.log(req.body);

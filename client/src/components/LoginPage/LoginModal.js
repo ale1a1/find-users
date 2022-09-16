@@ -21,8 +21,6 @@ export function LoginModal(props) {
         logingRepository.save({ email: user.email, id: user.id });
       } else {
         setLoginError("Wrong password or wrong email. Try again!");
-        console.log(loginError);
-        console.log(user.message);
       }
     });
   };
@@ -89,12 +87,12 @@ export function LoginModal(props) {
                   />
                 </div>
                 <div className="mb-3">
+                  <p>{loginError}</p>
+                </div>
+                <div className="mb-3">
                   <a href="" className="forgotPassword">
                     Forgot password?
                   </a>
-                </div>
-                <div className="mb-3">
-                  <p>{loginError}</p>
                 </div>
                 <div className="modal-footer loginModalFooter">
                   <button

@@ -6,10 +6,20 @@ import "../../style.css";
 export function ForgotPasswordModal1() {
   const [email, setEmail] = useState();
 
-  const forgotPassword = () => {};
-
   const closeHandler = () => {
     setEmail("");
+  };
+
+  const forgotPasswordModal2Switcher = () => {
+    const forgotPasswordModal2 = document.querySelector(
+      ".forgotPasswordModal2"
+    );
+    forgotPasswordModal2.classList.toggle("showModal");
+  };
+
+  const forgotPassword = () => {
+    closeHandler();
+    forgotPasswordModal2Switcher();
   };
 
   return (
@@ -18,21 +28,18 @@ export function ForgotPasswordModal1() {
         className="modal fade"
         id="forgotPasswordModal1"
         tabIndex="-1"
-        aria-labelledby="loginLabel"
+        aria-labelledby="forgotPassword1Label"
         aria-hidden="true"
       >
-        <div className="modal-dialog loginModal">
-          <div className="modal-content loginModalBox">
-            <div className="modal-header loginModalHeader">
-              <h4 className="modal-title" id="getOfferLabel">
-                FORGOT PASSWORD
-              </h4>
+        <div className="modal-dialog forgotPasswordModal1">
+          <div className="modal-content forgotPasswordModal1Box">
+            <div className="modal-header forgotPasswordModal1Header">
+              <h4 className="modal-title">FORGOT PASSWORD</h4>
             </div>
             <div className="modal-body">
               <form
                 onSubmit={function (e) {
                   forgotPassword();
-                  closeHandler();
                   e.preventDefault();
                 }}
               >
@@ -41,7 +48,7 @@ export function ForgotPasswordModal1() {
                     email address
                   </label>
                   <input
-                    type="text"
+                    type="email"
                     className="form-control bg-dark text-white"
                     name="email address"
                     placeholder="Insert your email address"
@@ -50,7 +57,7 @@ export function ForgotPasswordModal1() {
                     required
                   />
                 </div>
-                <div className="modal-footer loginModalFooter">
+                <div className="modal-footer forgotPasswordModal1Footer">
                   <button
                     className="btn btn-outline-danger mt-2"
                     type="button"

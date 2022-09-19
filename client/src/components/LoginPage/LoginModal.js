@@ -3,6 +3,7 @@ import { UsersService } from "../../libs/UsersService";
 import { LoginRepository } from "../../libs/repository/LoginRepository";
 
 import { ForgotPasswordModal1 } from "./ForgotPasswordModal1";
+import { ForgotPasswordModal2 } from "./ForgotPasswordModal2";
 
 import "../../style.css";
 
@@ -61,7 +62,7 @@ export function LoginModal(props) {
                     email address
                   </label>
                   <input
-                    type="text"
+                    type="email"
                     className="form-control bg-dark text-white"
                     name="email address"
                     placeholder="Insert your email address"
@@ -86,7 +87,7 @@ export function LoginModal(props) {
                   <p>{loginError}</p>
                 </div>
                 <div className="mb-3">
-                  <button
+                  <a
                     type="button"
                     data-bs-toggle="modal"
                     data-bs-target="#forgotPasswordModal1"
@@ -94,7 +95,7 @@ export function LoginModal(props) {
                     className="forgotPassword"
                   >
                     Forgot password?
-                  </button>
+                  </a>
                 </div>
                 <div className="modal-footer loginModalFooter">
                   <button
@@ -119,6 +120,7 @@ export function LoginModal(props) {
         </div>
       </div>
       <ForgotPasswordModal1 />
+      <ForgotPasswordModal2 />
     </Fragment>
   );
 }

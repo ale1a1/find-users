@@ -1,6 +1,6 @@
 import React from "react";
 
-export function ForgotPasswordModal2() {
+export function ForgotPasswordModal2(props) {
   const forgotPasswordModal2Switcher = () => {
     const forgotPasswordModal2 = document.querySelector(
       ".forgotPasswordModal2"
@@ -10,12 +10,14 @@ export function ForgotPasswordModal2() {
 
   const continueClick = () => {
     forgotPasswordModal2Switcher();
+    document.getElementById("forgotPasswordForm").submit();
   };
 
   return (
     <div className="forgotPasswordModal2">
       <div className="forgotPasswordModal2Box">
-        <h1>SAVED !</h1>
+        <h1>CHECK YOUR EMAIL BOX</h1>
+        <p>We sent a link to {props.email} for resetting the password</p>
         <p>
           Click <em>continue</em> to close this window
         </p>

@@ -12,8 +12,13 @@ const logingRepository = new LoginRepository();
 
 export function LoginModal(props) {
   const [email, setEmail] = useState();
+  const [emailForPasswordReset, setEmailForPasswordReset] = useState();
   const [password, setPassword] = useState();
   const [loginError, setLoginError] = useState("");
+
+  const passwordResetEmail = (email) => {
+    setEmailForPasswordReset(email);
+  };
 
   const login = async (email, password) => {
     // props.loaderSwitcher(true);
@@ -119,8 +124,8 @@ export function LoginModal(props) {
           </div>
         </div>
       </div>
-      <ForgotPasswordModal1 />
-      <ForgotPasswordModal2 />
+      <ForgotPasswordModal1 passwordResetEmail={passwordResetEmail} />
+      <ForgotPasswordModal2 email={emailForPasswordReset} />
     </Fragment>
   );
 }

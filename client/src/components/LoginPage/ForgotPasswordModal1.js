@@ -3,7 +3,7 @@ import { Fragment, useState } from "react";
 
 import "../../style.css";
 
-export function ForgotPasswordModal1() {
+export function ForgotPasswordModal1(props) {
   const [email, setEmail] = useState();
 
   const closeHandler = () => {
@@ -17,8 +17,9 @@ export function ForgotPasswordModal1() {
     forgotPasswordModal2.classList.toggle("showModal");
   };
 
-  const forgotPassword = () => {
-    closeHandler();
+  const forgotPassword = (email) => {
+    props.passwordResetEmail(email);
+    console.log(email);
     forgotPasswordModal2Switcher();
   };
 
@@ -38,9 +39,11 @@ export function ForgotPasswordModal1() {
             </div>
             <div className="modal-body">
               <form
+                id="forgotPasswordForm"
                 onSubmit={function (e) {
-                  forgotPassword();
+                  forgotPassword(email);
                   e.preventDefault();
+                  console.log("submitted");
                 }}
               >
                 <div className="mb-3">

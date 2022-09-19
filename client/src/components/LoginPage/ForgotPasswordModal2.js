@@ -18,11 +18,11 @@ export function ForgotPasswordModal2(props) {
       <div className="forgotPasswordModal2Box">
         <h1>CHECK YOUR EMAIL BOX</h1>
         <p>
-          We sent a link to{" "}
+          Click on the link that we sent to{" "}
           <em>
             <b>{props.email}</b>
           </em>{" "}
-          for resetting the password
+          to reset the password
         </p>
         <p>
           Click <em>continue</em> to close this window

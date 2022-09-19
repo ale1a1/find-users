@@ -16,13 +16,13 @@ export function RegisterVerificationModal(props) {
   return (
     <div className="registerVerificationModal">
       <div className="registerVerificationModalBox">
-        <h1>CHECK YOUR EMAIL BOX</h1>
+        <h1>USER REGISTERED</h1>
         <p>
-          We sent a link to{" "}
+          Click on the link that we sent to{" "}
           <em>
             <b>{props.emailForRegVerification}</b>
           </em>{" "}
-          for verifying the email address
+          to verify the email address before to login for the first time
         </p>
         <p>
           Click <em>continue</em> to close this window

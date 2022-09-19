@@ -23,7 +23,7 @@ export function LogoutModal(props) {
         <p>Are you sure you want to logout?</p>
         <a
           // onClick={logOut}
-          className="modal-btn modal-btn-yes btn btn-outline-success btn-sm"
+          className="modal-btn modal-btn-yes btn btn-outline-warning btn-sm"
           href="/"
           role="button"
           onClick={logOut}

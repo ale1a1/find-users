@@ -93,12 +93,6 @@ export function MyProfileFormModal(props) {
           <div className="modal-content myProfileFormModalBox fw-bold">
             <div className="modal-header myProfileFormModalHeader">
               <h4 className="modal-title  ">EDIT PROFILE</h4>
-              <button
-                className="btn-close bg-danger bg-danger"
-                type="button"
-                data-bs-dismiss="modal"
-                aria-label="Close"
-              ></button>
             </div>
             <div className="modal-body">
               {/* <form id="myForm" onSubmit={handler}> */}
@@ -156,7 +150,7 @@ export function MyProfileFormModal(props) {
                   </button>
                   {/* <button className="btn btn-primary  mt-2" type="submit"> */}
                   <button
-                    className="btn btn-outline-success  mt-2"
+                    className="btn btn-outline-warning  mt-2"
                     onClick={handler}
                   >
                     SAVE

@@ -56,12 +56,6 @@ export function RegisterModal(props) {
           <div className="modal-content registerFormModalBox">
             <div className="modal-header registerFormModalHeader">
               <h4 className="modal-title">REGISTER</h4>
-              <button
-                className="btn-close bg-danger bg-danger"
-                type="button"
-                data-bs-dismiss="modal"
-                aria-label="Close"
-              ></button>
             </div>
             <div className="modal-body">
               <form

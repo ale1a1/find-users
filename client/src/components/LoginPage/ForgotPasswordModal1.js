@@ -1,42 +1,22 @@
+import React from "react";
 import { Fragment, useState } from "react";
-import { UsersService } from "../../libs/UsersService";
-import { LoginRepository } from "../../libs/repository/LoginRepository";
-
-import { ForgotPasswordModal1 } from "./ForgotPasswordModal1";
 
 import "../../style.css";
 
-const usersService = new UsersService();
-const logingRepository = new LoginRepository();
-
-export function LoginModal(props) {
+export function ForgotPasswordModal1() {
   const [email, setEmail] = useState();
-  const [password, setPassword] = useState();
-  const [loginError, setLoginError] = useState("");
 
-  const login = async (email, password) => {
-    // props.loaderSwitcher(true);
-    await usersService.loginUser(email, password).then((user) => {
-      // props.loaderSwitcher(false);
-      if (user.message !== "error") {
-        props.loginHandler();
-        logingRepository.save({ email: user.email, id: user.id });
-      } else {
-        setLoginError("Wrong password or wrong email. Try again!");
-      }
-    });
-  };
+  const forgotPassword = () => {};
 
   const closeHandler = () => {
     setEmail("");
-    setPassword("");
   };
 
   return (
     <Fragment>
       <div
         className="modal fade"
-        id="loginModal"
+        id="forgotPasswordModal1"
         tabIndex="-1"
         aria-labelledby="loginLabel"
         aria-hidden="true"
@@ -45,13 +25,13 @@ export function LoginModal(props) {
           <div className="modal-content loginModalBox">
             <div className="modal-header loginModalHeader">
               <h4 className="modal-title" id="getOfferLabel">
-                LOGIN
+                FORGOT PASSWORD
               </h4>
             </div>
             <div className="modal-body">
               <form
                 onSubmit={function (e) {
-                  login(email, password);
+                  forgotPassword();
                   closeHandler();
                   e.preventDefault();
                 }}
@@ -70,32 +50,6 @@ export function LoginModal(props) {
                     required
                   />
                 </div>
-                <div className="mb-3">
-                  <label className="col-form-label cssBold">password</label>
-                  <input
-                    type="password"
-                    className="form-control bg-dark text-white"
-                    name="Password"
-                    placeholder="Insert your password"
-                    onChange={(e) => setPassword(e.target.value)}
-                    value={password}
-                    required
-                  />
-                </div>
-                <div className="mb-3">
-                  <p>{loginError}</p>
-                </div>
-                <div className="mb-3">
-                  <button
-                    type="button"
-                    data-bs-toggle="modal"
-                    data-bs-target="#forgotPasswordModal1"
-                    aria-controls="forgotPassword"
-                    className="forgotPassword"
-                  >
-                    Forgot password?
-                  </button>
-                </div>
                 <div className="modal-footer loginModalFooter">
                   <button
                     className="btn btn-outline-danger mt-2"
@@ -110,7 +64,7 @@ export function LoginModal(props) {
                     type="submit"
                     // data-bs-dismiss="modal"
                   >
-                    LOGIN
+                    CONTINUE
                   </button>
                 </div>
               </form>
@@ -118,7 +72,6 @@ export function LoginModal(props) {
           </div>
         </div>
       </div>
-      <ForgotPasswordModal1 />
     </Fragment>
   );
 }

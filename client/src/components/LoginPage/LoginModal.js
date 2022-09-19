@@ -13,6 +13,7 @@ const logingRepository = new LoginRepository();
 export function LoginModal(props) {
   const [email, setEmail] = useState();
   const [emailForPasswordReset, setEmailForPasswordReset] = useState();
+
   const [password, setPassword] = useState();
   const [loginError, setLoginError] = useState("");
 

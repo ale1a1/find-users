@@ -512,6 +512,60 @@ ion-icon {
 
 /* ////////////////////////////////////////////////////////////////////////////////////////////// */
 
+/* //////////////////////////  REGISTER VERIFICATION MODAL ////////////////////////////////// */
+
+.registerVerificationModal {
+  background-color: rgba(0, 0, 0, 0.644);
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  display: none;
+  z-index: 10000;
+  height: 100vh;
+  width: 100vw;
+}
+
+.registerVerificationModalBox {
+  color: #fff;
+  border: solid 0.5px #ffc10754;
+  border-radius: 2%;
+  background-color: rgb(27, 27, 27) !important;
+  text-align: center;
+  width: 35%;
+  height: 45%;
+}
+
+.registerVerificationModalBox h1 {
+  font-size: 1.5rem;
+  margin-top: 0.5rem;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: solid 0.5px #ffc10754;
+}
+.registerVerificationModalBox p {
+  padding: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+  margin-top: 2rem;
+  font-size: 1.3rem;
+  color: #fff;
+}
+
+.modal-btn {
+  margin: 1rem;
+  width: 30%;
+  font-size: 1rem;
+}
+
+.showModal {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ////////////////////////////////////////////////////////////////////////////////////////////// */
+
 /* //////////////////////////  FOOTER  ////////////////////////////////// */
 
 footer h2 {

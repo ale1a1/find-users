@@ -5,6 +5,8 @@ import "react-phone-number-input/style.css";
 
 import PhoneInput from "react-phone-number-input";
 
+import { RegisterVerificationModal } from "./RegisterVerificationModal";
+
 const usersService = new UsersService();
 const loginRepository = new LoginRepository();
 
@@ -13,13 +15,26 @@ const addUser = usersService.addUser;
 export function RegisterModal(props) {
   const [form, setForm] = useState({});
   const [labelErrorMessage, setLabelErrorMessage] = useState({});
+  const [emailForRegVerification, setEmailForRegVerification] = useState();
 
-  const IsLoggedIn = () => {
-    props.loginHandler();
+  const registerVerificationModalSwitcher = () => {
+    const registerVerificationModal = document.querySelector(
+      ".registerVerificationModal"
+    );
+    registerVerificationModal.classList.toggle("showModal");
   };
+
+  const regVerificationEmail = (email) => {
+    setEmailForRegVerification(email);
+  };
+
+  // const IsLoggedIn = () => {
+  //   props.loginHandler();
+  // };
 
   const handler = async (e) => {
     e.preventDefault();
+    regVerificationEmail(form.email);
     await addUser(form).then((response) => {
       const errors = {};
       if (response.status === 409) {
@@ -29,12 +44,13 @@ export function RegisterModal(props) {
         setLabelErrorMessage(errors);
         console.log(labelErrorMessage);
       } else {
-        loginRepository.save({
-          email: response.data.user.email,
-          id: response.data.user.id,
-        });
-        IsLoggedIn();
-        alert("User successfully created. Click ok to login");
+        // loginRepository.save({
+        //   email: response.data.user.email,
+        //   id: response.data.user.id,
+        // });
+        // IsLoggedIn();
+        // alert("User successfully created. Click ok to login");
+        registerVerificationModalSwitcher();
       }
     });
   };
@@ -178,6 +194,9 @@ export function RegisterModal(props) {
           </div>
         </div>
       </div>
+      <RegisterVerificationModal
+        emailForRegVerification={emailForRegVerification}
+      />
     </Fragment>
   );
 }

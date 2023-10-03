@@ -9,5 +9,7 @@ RUN yarn install --frozen-lockfile --production
 
 COPY ./server .
 
+EXPOSE 3001
+
 ENTRYPOINT [ "yarn" ]
 CMD ["start:prod"]

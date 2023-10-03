@@ -9,3 +9,20 @@ services:
       - MARIADB_ROOT_PASSWORD=rootPassword
       - MARIADB_USER=gamingUser
       - MARIADB_PASSWORD=gamingPassword
+      - MARIADB_DATABASE=prova
+
+  backend:
+    image: ale1a1/find-users-api:latest
+    build:
+      context: server
+    ports:
+      - 3001:3001
+    environment:
+      - DB_DIALECT=mysql
+      - DB_HOST=database
+      - DB_USERNAME=gamingUser
+      - DB_PASSWORD=gamingPassword
+      - DB_PORT=3306
+      - DB_NAME=prova
+    depends_on:
+      - database

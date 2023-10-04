@@ -3,7 +3,7 @@ const environments = {
     serverUrl: "http://localhost:3001",
   },
   prod: {
-    serverUrl: "https://find-users.herokuapp.com",
+    serverUrl: "https://findusers-ale1a184.b4a.run/",
   },
 };
 

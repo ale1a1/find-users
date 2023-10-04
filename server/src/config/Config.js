@@ -9,6 +9,8 @@ const databaseConfig = {
   database: process.env.DB_NAME,
 };
 
-module.exports = { databaseConfig };
+const databaseURI = process.env.DB_URI;
+
+module.exports = { databaseConfig, databaseURI };
 
 //ignore this comment!//

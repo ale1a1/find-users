@@ -1,15 +1,19 @@
 const { Sequelize } = require("@sequelize/core");
 
-const { databaseConfig } = require("../config/Config");
-
-const sequelize = new Sequelize({
-  dialect: databaseConfig.dialect,
-  host: databaseConfig.host,
-  username: databaseConfig.username,
-  password: databaseConfig.password,
-  port: databaseConfig.port,
-  database: databaseConfig.database,
+const { databaseConfig, databaseURI } = require("../config/Config");
+let sequelize;
+if(databaseURI) {
+  sequelize = new Sequelize(databaseURI);
+} else {
+  sequelize = new Sequelize({
+    dialect: databaseConfig.dialect,
+    host: databaseConfig.host,
+    username: databaseConfig.username,
+    password: databaseConfig.password,
+    port: databaseConfig.port,
+    database: databaseConfig.database,
 });
+}
 
 module.exports = { sequelize };
 

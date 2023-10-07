@@ -117,7 +117,7 @@ export function RegisterModal(props) {
 
                 <div className="mb-3">
                   <label className="col-form-label">
-                    password (between 8 and 16 characthers)
+                    password (between 8 and 16 characters)
                   </label>
                   <input
                     type="password"

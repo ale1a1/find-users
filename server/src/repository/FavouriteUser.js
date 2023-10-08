@@ -8,15 +8,15 @@ const FavouriteUser = sequelize.define("FavouriteUser", {
     allowNull: false,
   },
   name: {
-    type: DataTypes.INTEGER,
+    type: DataTypes.STRING,
     allowNull: false,
   },
   email: {
-    type: DataTypes.INTEGER,
+    type: DataTypes.STRING,
     allowNull: false,
   },
   phoneNumber: {
-    type: DataTypes.INTEGER,
+    type: DataTypes.STRING,
     allowNull: false,
   },
 });

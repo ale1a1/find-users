@@ -4,11 +4,11 @@ const { sequelize } = require("./SequelizeConnection");
 
 const FavouriteUserJunction = sequelize.define("FavouriteUserJunction", {
   ownerID: {
-    type: DataTypes.STRING,
+    type: DataTypes.INTEGER,
     allowNull: false,
   },
   favUserID: {
-    type: DataTypes.STRING,
+    type: DataTypes.INTEGER,
     allowNull: false,
   },
 });

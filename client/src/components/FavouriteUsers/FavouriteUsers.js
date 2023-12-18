@@ -98,7 +98,7 @@ export class FavouriteUsers extends Component {
     const loader = this.state.loader;
     const favTable = (
       <div className="table-responsive usersTable">
-        <table className="table text-light w-75 ms-5 align-middle">
+        <table className="table text-light align-middle">
           <thead className="table-light">
             <tr>
               <th>Username</th>
@@ -126,9 +126,9 @@ export class FavouriteUsers extends Component {
     ) : (
       <Fragment>
         <div className="container pt-5">
-          <h3 className="text-light mt-5 mb-5 mb-1 usersListHeader">
+          <h1 className="text-light mb-5 usersListHeader">
             FAVOURITES
-          </h3>
+          </h1>
           {this.state.favouriteUsers[0] ? favTable : <NoFavs />}
         </div>
         <DeleteUserModal

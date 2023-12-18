@@ -78,7 +78,7 @@ export function MyProfile(props) {
   ) : (
     <Fragment>
       <div className="container pt-5 profileMainContent">
-        <h3 className="text-light mt-5 profileHeader">PROFILE</h3>
+        <h1 className="text-light mt-5 profileHeader usersListHeader">PROFILE</h1>
         <div className="container-profile">
           <div className="table-container table-container-profile">
             <table className="table myProfileTable text-light mt-5 mb-5">

@@ -115,11 +115,11 @@ export function UsersList(props) {
   ) : (
     <Fragment>
       <div className="container pt-5">
-        <h3 className="text-light mt-5 mb-5 mb-1 usersListHeader">
+        <h1 className="text-light mb-5 usersListHeader">
           USERS LIST
-        </h3>
-        <div className="table-responsive usersTable">
-          <table className="table table-fixed text-light w-75 ms-5 align-middle">
+        </h1>
+        <div className="usersTable table-responsive"> 
+          <table className="table table-fixed text-light align-middle">
             <thead className="table-light">
               <tr>
                 <th>Username</th>

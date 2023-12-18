@@ -95,7 +95,10 @@
 }
 
 .mainPageHeader {
-  font-size: 2rem;
+  font-size: 3rem !important;
+  margin: auto;
+  margin-top: 10vh;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
 }
 
 .mainPageList {
@@ -122,11 +125,17 @@ ion-icon {
 /* //////////////////////////  USERS LIST ////////////////////////////////// */
 
 .usersListHeader {
-  font-size: 2rem;
+  font-size: 3rem !important;
+  margin: auto;
+  margin-top: 10vh;
+  text-align: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .usersTable {
   max-height: 63vh;
+  margin: auto !important;
+  margin-top: 6rem !important;
   overflow: auto;
   backdrop-filter: blur(2px);
 }
@@ -150,7 +159,11 @@ ion-icon {
 }
 
 .profileHeader {
-  font-size: 2rem;
+  font-size: 3rem !important;
+  margin: auto;
+  margin-top: 10vh !important;
+  text-align: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   margin-bottom: 5rem;
 }
 

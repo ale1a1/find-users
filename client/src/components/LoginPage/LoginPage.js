@@ -38,21 +38,18 @@ export function LoginPage(props) {
             REGISTER
           </button>
         </div>
-        <div className="border p-3 text-light d-flex flex-column mt-5">
-          <p>Are you in a hurry or you prefer not to register yet ?!</p>
-          <div>
-            <div>Check out the app using the credentials below</div>            
-            <div>
-              <p className="fw-bold">email address: </p>
-              <span>userTEST@userTEST.com</span>
-            </div>
-            <div>
-              <p className="fw-bold">password: </p>
-              <span>userTEST123</span>
-            </div>                   
+        <div className="p-2 text-light d-flex flex-column mt-3">
+          <h3><span className="text-start">*</span> Test credentials</h3>           
+          <div className="d-flex ms-3">
+            <p className="fw-bold">email address:</p>
+            <span className="fst-italic">'userTEST@userTEST.com'</span>
+          </div>
+          <div className="d-flex ms-3"> 
+            <p className="fw-bold">password:</p>
+            <span className="fst-italic">'userTEST123'</span>
+          </div>                   
           </div>          
         </div>
-      </div>
       {/* <LoginModal loggingUser={props.loggingUser} /> */}
       <LoginModal
         isLoggedIn={props.isLoggedIn}

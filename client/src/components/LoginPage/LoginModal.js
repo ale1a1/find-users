@@ -1,8 +1,7 @@
 import { Fragment, useState } from "react";
 import { UsersService } from "../../libs/UsersService";
 import { LoginRepository } from "../../libs/repository/LoginRepository";
-
-import "../../style.css";
+import './LoginModal.css'
 
 const usersService = new UsersService();
 const logingRepository = new LoginRepository();

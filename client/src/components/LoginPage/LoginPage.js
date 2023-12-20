@@ -18,7 +18,7 @@ export function LoginPage(props) {
             Register to our app and login to get things started.
           </h2>
         </div>
-        <div className="loginPageButtons">
+        <div className="loginPageButtons mb-2">
           <button
             className="btn btn-lg btn-outline-warning mx-5"
             type="button"
@@ -38,18 +38,23 @@ export function LoginPage(props) {
             REGISTER
           </button>
         </div>
-        <div className="p-2 text-light d-flex flex-column mt-3">
-          <h3><span className="text-start">*</span> Test credentials</h3>           
-          <div className="d-flex ms-3">
-            <p className="fw-bold">email address:</p>
-            <span className="fst-italic">'userTEST@userTEST.com'</span>
-          </div>
-          <div className="d-flex ms-3"> 
-            <p className="fw-bold">password:</p>
-            <span className="fst-italic">'userTEST123'</span>
-          </div>                   
-          </div>          
-        </div>
+        <div className="mt-5 p-2 text-light">
+          <hr className="text-warning"></hr>
+          <h4 className="mt-4 text-warning">Test credentials</h4> 
+          <div className="mt-3">
+            <div className="d-flex gap-2">
+              <span className="text-warning fw-bold">•</span>
+              <p className="fw-bold">email address:</p>
+              <span className="fst-italic">'userTEST@userTEST.com'</span>
+            </div>
+            <div className="d-flex gap-2"> 
+              <span className="text-warning fw-bold">•</span>
+              <p className="fw-bold">password:</p>
+              <span className="fst-italic">'userTEST123'</span>
+            </div>
+          </div>                        
+        </div>          
+      </div>
       {/* <LoginModal loggingUser={props.loggingUser} /> */}
       <LoginModal
         isLoggedIn={props.isLoggedIn}

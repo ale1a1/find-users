@@ -2,8 +2,9 @@ import { useState, Fragment } from "react";
 import { UsersService } from "../../libs/UsersService";
 import { LoginRepository } from "../../libs/repository/LoginRepository";
 import "react-phone-number-input/style.css";
-
 import PhoneInput from "react-phone-number-input";
+
+import './RegisterModal.css'
 
 const usersService = new UsersService();
 const loginRepository = new LoginRepository();

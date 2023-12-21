@@ -18,6 +18,31 @@ export function Navbar(props) {
     logoutModal.classList.toggle("showModal");
   };
 
+  const navLinks = document.querySelectorAll('.nav-link');
+
+  const pathname = window.location.pathname; 
+
+  let key 
+
+  if (pathname === '/')  {
+    key = 'Home'
+  } 
+  if (pathname === '/users') {
+    key = 'Users list'
+  } 
+  if (pathname === '/favourites') {
+    key = 'Favourites'
+  }
+  if (pathname === '/profile') {
+    key = 'Profile'
+  }
+  
+  navLinks.forEach(nav => {   
+    if (nav.innerHTML === key) {
+      nav.classList.add('active-navtab')
+    }
+  })
+
   return (
     <Fragment>
       <nav
@@ -40,7 +65,7 @@ export function Navbar(props) {
           </button>
           <div className="collapse navbar-collapse" id="Navbar">
             <ul className="navbar-nav ms-5 me-auto mb-2 mb-lg-0">
-              <li className="nav-item">
+              <li className="nav-item me-3">
                 <a
                   //   className={`nav-link ${props.homeClass} text-uppercase`}
                   className="nav-link  text-uppercase"
@@ -49,7 +74,7 @@ export function Navbar(props) {
                   Home
                 </a>
               </li>
-              <li className="nav-item">
+              <li className="nav-item me-3">
                 <a
                   //   className={`nav-link ${props.searchClass} text-uppercase`}
                   className="nav-link  text-uppercase"
@@ -58,7 +83,7 @@ export function Navbar(props) {
                   Users list
                 </a>
               </li>
-              <li className="nav-item">
+              <li className="nav-item me-3">
                 <a
                   //   className={`nav-link ${props.buddiesClass} text-uppercase`}
                   className="nav-link  text-uppercase"
@@ -67,7 +92,7 @@ export function Navbar(props) {
                   Favourites
                 </a>
               </li>
-              <li className="nav-item">
+              <li className="nav-item me-3">
                 <a
                   //   className={`nav-link ${props.profileClass} text-uppercase`}
                   className="nav-link  text-uppercase"

@@ -5,3 +5,9 @@
 .nav-link {
   font-weight: bold;
 }
+
+.active-navtab {
+  color: black !important;
+  cursor: default;
+  pointer-events: none;
+}

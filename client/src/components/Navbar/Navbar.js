@@ -2,6 +2,8 @@ import { Fragment } from "react";
 // import { LogoutRepository } from "../../libs/repository/LogoutRepository";
 
 import "../../queries.css";
+import "./Navbar.css";
+
 
 // const logoutRepository = new LogoutRepository();
 

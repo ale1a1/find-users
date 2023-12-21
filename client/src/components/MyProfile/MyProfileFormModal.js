@@ -1,12 +1,14 @@
 import React, { Fragment, useState } from "react";
 import { UsersService } from "../../libs/UsersService";
-import { LoginRepository } from "../../libs/repository/LoginRepository";
-import { LogoutRepository } from "../../libs/repository/LogoutRepository";
+// import { LoginRepository } from "../../libs/repository/LoginRepository";
+// import { LogoutRepository } from "../../libs/repository/LogoutRepository";
 
 import { MyProfileUpdatedModal } from "../MyProfile/MyProfileUpdatedModal";
 
-const loginRepository = new LoginRepository();
-const logoutRepository = new LogoutRepository();
+import './MyProfileFormModal.css'
+
+// const loginRepository = new LoginRepository();
+// const logoutRepository = new LogoutRepository();
 const usersService = new UsersService();
 
 const editUser = usersService.editUser;
@@ -80,6 +82,17 @@ export function MyProfileFormModal(props) {
     setLabelErrorMessage({});
   };
 
+  const setPhoneInputRules = function () {
+    const phoneInput = document.getElementById('phone-input');
+    phoneInput.addEventListener('input', function(event) {
+    // Remove non-numeric characters using a regular expression
+    phoneInput.value = phoneInput.value.replace(/\D/g, '');
+  });
+}
+  
+
+  setTimeout(setPhoneInputRules, 500)
+
   return (
     <Fragment>
       <div
@@ -135,8 +148,9 @@ export function MyProfileFormModal(props) {
                   )}
                   {/* <label className="col-form-label">phone number</label> */}
                   <input
-                    type="number"
+                    type="tel"
                     className="form-control bg-dark text-white"
+                    id = "phone-input"
                     name="phone number"
                     placeholder="Insert the new phone number"
                     onChange={(e) => props.changePhoneNumber(e.target.value)}

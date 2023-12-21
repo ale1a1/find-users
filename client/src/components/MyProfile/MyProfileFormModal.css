@@ -1,0 +1,19 @@
+.myProfileFormModalBox {
+  margin-top: 15vh;
+  background-color: rgb(27, 27, 27) !important;
+  color: #fff;
+  border-radius: 2%;
+  border: solid 0.5px #ffc10754;
+}
+
+.myProfileFormModalHeader {
+  border-bottom: solid 0.5px #ffc10754;
+}
+
+.myProfileFormModalHeader h4 {
+  font-size: 1.5rem;
+}
+
+.myProfileFormModalFooter {
+  border-top: none;
+}

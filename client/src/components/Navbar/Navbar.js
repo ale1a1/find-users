@@ -1,9 +1,9 @@
 import { Fragment } from "react";
-import { LogoutRepository } from "../../libs/repository/LogoutRepository";
+// import { LogoutRepository } from "../../libs/repository/LogoutRepository";
 
 import "../../queries.css";
 
-const logoutRepository = new LogoutRepository();
+// const logoutRepository = new LogoutRepository();
 
 export function Navbar(props) {
   // const logOut = () => {
@@ -76,7 +76,7 @@ export function Navbar(props) {
                 </a>
               </li>
             </ul>
-            <a
+            <div
               // onClick={logOut}
               className="btn btn-outline-dark btn-sm"
               // href="/"
@@ -84,7 +84,7 @@ export function Navbar(props) {
               onClick={logoutModalSwitcher}
             >
               logout
-            </a>
+            </div>
           </div>
         </div>
       </nav>

@@ -197,7 +197,7 @@ ion-icon {
 /* //////////////////////////  LOGOUT MODAL ////////////////////////////////// */
 
 .logoutModal {
-  background-color: rgba(0, 0, 0, 0.644);
+  background-color: rgba(0, 0, 0, 0.85);
   position: fixed;
   top: 0px;
   left: 0px;
@@ -210,14 +210,14 @@ ion-icon {
 .logoutModalBox {
   /* color: black; */
   color: #fff;
-  border: solid 0.5px #ffc10754;
+  border: solid 1px #ffc10754;
   /* border: solid 0.5px rgb(221, 221, 221); */
   border-radius: 2%;
   /* background-color: #fff !important; */
   background-color: rgb(27, 27, 27) !important;
   text-align: center;
-  width: 25%;
-  height: 35%;
+  width: 22%;
+  height: 29%;
 }
 
 .logoutModalBox h1 {

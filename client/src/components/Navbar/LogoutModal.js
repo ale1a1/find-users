@@ -2,6 +2,7 @@ import React from "react";
 
 import { LogoutRepository } from "../../libs/repository/LogoutRepository";
 
+
 const logoutRepository = new LogoutRepository();
 
 export function LogoutModal(props) {
@@ -30,14 +31,14 @@ export function LogoutModal(props) {
         >
           YES
         </a>
-        <a
+        <div
           // onClick={logOut}
           className="modal-btn modal-btn-no btn btn-outline-danger btn-sm"
           onClick={logoutModalSwitcher}
           role="button"
         >
           NO
-        </a>
+        </div>
       </div>
     </div>
   );

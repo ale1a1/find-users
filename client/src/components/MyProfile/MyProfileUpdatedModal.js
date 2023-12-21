@@ -15,9 +15,9 @@ export function MyProfileUpdatedModal() {
   return (
     <div className="myProfileUpdatedModal">
       <div className="myProfileUpdatedModalBox">
-        <h1>SAVED !</h1>
+        <h1>Profile successfully updated!</h1>
         <p>
-          Click <em>continue</em> to close this window
+          Click <em>'Continue'</em> to close this window
         </p>
         <a
           className="modal-btn modal-btn-yes btn btn-outline-success btn-sm"

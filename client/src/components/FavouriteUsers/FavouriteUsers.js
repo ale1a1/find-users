@@ -10,7 +10,7 @@ import "../../style.css";
 
 const favouriteUsersService = new FavouriteUsersService();
 const loginRepository = new LoginRepository();
-const owner = loginRepository.list()[0];
+// const owner = loginRepository.list()[0];
 const currentUserID = loginRepository.list()[0]?.id;
 
 export class FavouriteUsers extends Component {

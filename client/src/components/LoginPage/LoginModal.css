@@ -3,11 +3,11 @@
   background-color: rgb(27, 27, 27) !important;
   color: #fff;
   border-radius: 2%;
-  border: solid 0.5px #ffc10754;
+  border: solid 1px #ffc10754;
 }
 
 .loginModalHeader {
-  border-bottom: solid 0.5px #ffc10754;
+  border-bottom: solid 1px #ffc10754;
 }
 
 .loginModalHeader h4 {

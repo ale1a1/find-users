@@ -226,21 +226,38 @@ font-size: 1.7rem !important;
 @media (max-width: 59em) {
   /* //////////////////////////  LOGIN PAIGE ////////////////////////////////// */
 
+  .loginPageMainContent {
+    padding: 7rem;
+    text-align: center;
+  }
+
   .loginPageHeader {
-    font-size: 2.2rem !important;
+    font-size: 2.5rem !important;
+    margin-bottom: 3rem !important;
   }
 
   .container-h2 h2 {
-    font-size: 1.5rem !important;
+    font-size: 2rem !important;
+    margin-top: 5rem !important;
   }
 
   .loginPageButtons {
-    margin-top: 6rem !important;
+    margin-top: 8.5rem !important;
   }
 
   .loginPageButtons button {
-    font-size: 1rem !important;
+    font-size: 1.5rem !important;
+    font-weight: bold;
   }
+
+  .testCredentials hr {
+    margin-bottom: 3rem !important;
+  }
+
+  .credential {
+    font-size: 1.5rem !important;
+  }
+
 
 
   /* //////////////////////////  LOGIN MODAL ////////////////////////////////// */

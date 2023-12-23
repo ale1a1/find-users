@@ -58,12 +58,12 @@ export function LoginPage(props) {
             <hr className="text-warning"></hr>
             <h4 className="mt-4 text-warning">Test credentials</h4> 
             <div className="mt-3">
-              <div className="d-flex gap-2">
+              <div className="d-flex gap-2 credential">
                 <span className="text-warning fw-bold">•</span>
                 <p className="fw-bold">email address:</p>
                 <span className="fst-italic">'userTEST@userTEST.com'</span>
               </div>
-              <div className="d-flex gap-2"> 
+              <div className="d-flex gap-2 credential"> 
                 <span className="text-warning fw-bold">•</span>
                 <p className="fw-bold">password:</p>
                 <span className="fst-italic">'userTEST123'</span>

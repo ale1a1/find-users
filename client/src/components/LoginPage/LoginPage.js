@@ -54,7 +54,7 @@ export function LoginPage(props) {
               REGISTER
             </button>
           </div>
-          <div className="mt-5 p-2 text-light">
+          <div className="mt-5 p-2 text-light testCredentials">
             <hr className="text-warning"></hr>
             <h4 className="mt-4 text-warning">Test credentials</h4> 
             <div className="mt-3">

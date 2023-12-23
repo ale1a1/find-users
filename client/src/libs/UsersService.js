@@ -36,7 +36,15 @@ export class UsersService {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({ email, password }),
-    }).then((data) => data.json());
+    }).then((response) => {
+      if (!response.ok) {
+        throw new Error(`Error: ${response.status} - ${response.statusText}`);
+      }
+      return response.json();
+    }).catch((error) => {
+      // Handle any network errors or exceptions here
+      throw new Error(`Fetch error: ${error.message}`);
+    });
   }
   // editUser(id, name, phoneNumber) {
   //   return fetch("http://localhost:3001/user/editUser", {

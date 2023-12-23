@@ -7,34 +7,86 @@ const usersService = new UsersService();
 const logingRepository = new LoginRepository();
 
 export function LoginModal(props) {
-  const [email, setEmail] = useState();
-  const [password, setPassword] = useState();
+  const [error, setError] = useState(null);
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
 
-  const login = async (email, password) => {
-    props.loaderSwitcher(true);
-    await usersService.loginUser(email, password).then((user) => {
-      props.loaderSwitcher(false);
-      if (user) props.loginHandler();
-      logingRepository.save({ email: user.email, id: user.id });
+  const [showErrorMessage,setShowErrorMessage] = useState(false);
+  const [loading, setLoading] = useState(false)
+  const [showModal, setShowModal] = useState(false)
+
+  const loginModal = document.getElementById('loginModal');
+  
+  if (loginModal) {
+    loginModal.addEventListener('hide.bs.modal', function (event) {
+      if (event.target === loginModal) {
+          closeHandler()
+      }
     });
+  }
+  
+
+
+  
+  // const login = async (email, password) => {
+  //   props.loaderSwitcher(true);
+  //   await usersService.loginUser(email, password).then((user) => {
+  //     props.loaderSwitcher(false);
+  //     if (user) props.loginHandler();
+  //     logingRepository.save({ email: user.email, id: user.id });
+  //   });
+  // };
+  
+  
+  const login = async (email, password) => {
+    setLoading(true)
+    try {
+      const user = await usersService.loginUser(email, password);
+      // props.loaderSwitcher(false);  
+
+      if (user) {
+        props.loginHandler();
+        logingRepository.save({ email: user.email, id: user.id });
+        // Close the modal after successful login
+        setShowModal(false);
+      } else {
+        setError('Invalid credentials');
+        setShowErrorMessage(true);   
+      }
+    } catch (error) {
+      setError('An error occurred'); 
+      setShowErrorMessage(true)
+    } finally {
+      setShowModal(true)
+      setLoading(false) 
+    }    
   };
 
+ 
   const closeHandler = () => {
     setEmail("");
     setPassword("");
+    setShowErrorMessage(false);
+    setShowModal(false); 
   };
 
   return (
     <Fragment>
+        {
+          loading ? 
+        (
+          <div className="spinner"></div>
+        ) : (
       <div
-        className="modal fade"
+        className={`modal fade ${showModal ? 'show' : ''}`} 
         id="loginModal"
         tabIndex="-1"
         aria-labelledby="loginLabel"
         aria-hidden="true"
       >
         <div className="modal-dialog loginModal">
-          <div className="modal-content loginModalBox">
+          <div className="modal-content loginModalBox
+          ">
             <div className="modal-header loginModalHeader">
               <h4 className="modal-title" id="getOfferLabel">
                 LOGIN
@@ -50,7 +102,8 @@ export function LoginModal(props) {
               <form
                 onSubmit={function (e) {
                   login(email, password);
-                  closeHandler();
+                  setEmail("");
+                  setPassword("");
                   e.preventDefault();
                 }}
               >
@@ -79,6 +132,8 @@ export function LoginModal(props) {
                   />
                 </div>
 
+                {showErrorMessage ? (<p className="text-danger">* Wrong credentials! Please try again.</p>) : (<p></p>)}
+
                 <div className="modal-footer loginModalFooter">
                   <button
                     className="btn btn-outline-danger mt-2"
@@ -101,6 +156,8 @@ export function LoginModal(props) {
           </div>
         </div>
       </div>
+      )
+      }
     </Fragment>
   );
 }

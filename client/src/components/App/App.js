@@ -30,7 +30,6 @@ export function App() {
 
   const loginHandler = () => {
     setIsLoggedIn(true);
-    console.log(loading);
     window.location.reload(false);
   };
 
@@ -107,4 +106,4 @@ export function App() {
   );
 }
 
-//ignore this comment//
+

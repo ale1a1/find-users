@@ -8,17 +8,10 @@ import { UsersService } from "../../libs/UsersService";
 const favouriteUsersService = new FavouriteUsersService();
 const usersService = new UsersService();
 const loginRepository = new LoginRepository();
-// const owner = loginRepository.list()[0];
-// console.log("owner" + owner);
+
 
 export function UsersList(props) {
-  // const getCurrentUserId = async () => {
-  //   const currentUserEmail = loginRepository.list()[0].email;
-  //   const currentUserID = await usersService
-  //     .getCurrentUser({ email: currentUserEmail })
-  //     .then((user) => user.id);
-  //   return currentUserID;
-  // };
+  
 
   const [usersList, setUsers] = useState([]);
   const [favouriteUsersList, setFavouriteUsersList] = useState([]);
@@ -52,59 +45,19 @@ export function UsersList(props) {
 
   useEffect(() => {
     props.loaderSwitcher(true);
-    usersService.getUsers().then((users) => setUsers(users));
-    // favouriteUsersService
-    //   .getUsersFromJunction(currentUserID)
-    //   .then((users) => users.map((user) => user.id))
-    //   .then((idList) => favouriteUsersService.getUsers(idList))
-    //   .then((favUsers) => setFavouriteUsersList(favUsers));
+    usersService.getUsers().then((users) => setUsers(users));  
     favouriteUsersService
       .getUsersFromJunction(currentUserID)
       .then((users) => users.map((user) => parseInt(user.favUserID)))
       .then((idList) => favouriteUsersService.getUsers(idList))
       .then((favUsers) => setFavouriteUsersList(favUsers))
       .then(props.loaderSwitcher(false))
-      .then(setTimeout(loaderFunct, 400));
-    // favouriteUsersService
-    //   .getUsers(favUsersJunctionIdList)
-    //   .then((favouriteUsers) => setFavouriteUsersList(favouriteUsers));
+      .then(setTimeout(loaderFunct, 1000));  
   }, []);
 
-  console.log(usersList);
-  console.log(favouriteUsersList);
-
-  // favouriteUsersService.getUsers(idList)
-  // setFavouriteUsersList(favUsers),
-
-  // useEffect(() => {
-  //   favUsersFunction();
-  // });
-
   const updateUsersList = async (user) => {
-    // const favouriteUser = { owner, ...user };
     const userForJunction = { ownerID: currentUserID, favUserID: user.id };
-    // await favouriteUsersService.addUser(favouriteUser);
     await favouriteUsersService.addUserToJunction(userForJunction);
-    // const updatedUsers = await usersService.getUsers();
-    // const updatedFavouriteUsers = await favouriteUsersService.getUsers(owner);
-    // const favUsersJunction = await favouriteUsersService.getUsersFromJunction(
-    //   currentUserID
-    // ); //da questo array di object tira fuori una lista di Favuser Id che appartengono all user che ha come ID il current User ID!
-    // dopo di che quando hai questi ID in un array query il DB cerando gli user che hanno questi ID e ritornali in una const
-    // quest const, che è un array di users, sarà usata per fare un for each e aggiornare sia la lista di userlist component,
-    // che la lista di fav user component
-    // const favUsersJunctionIdList = [];
-    // favUsersJunction.forEach((user) =>
-    //   favUsersJunctionIdList.push(user.favUserID)
-    // );
-    // const updatedFavouriteUsers = await favouriteUsersService.getUsers(
-    //   favUsersJunctionIdList
-    // );
-    // console.log(favUsersJunction);
-    // console.log(favUsersJunctionIdList);
-    // console.log(updatedFavouriteUsers);
-    // setUsers(updatedUsers);
-    // // setFavouriteUsersList(updatedFavouriteUsers);
     favUsersFunction();
   };
 

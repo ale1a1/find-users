@@ -10,7 +10,7 @@ export function MainPage(props) {
   };
 
   useEffect(() => {
-    setTimeout(loaderFunct, 400);
+    setTimeout(loaderFunct, 1000);
   }, []);
 
   return loader ? (
@@ -78,47 +78,6 @@ export function MainPage(props) {
               </a>
             </div>
           </li>
-
-          {/* <li>
-            <h5 className="mt-3">
-              Retrieve
-              <button className="btn btn-sm">
-                <a
-                  className="nav-link link-warning text-uppercase h5"
-                  href="users"
-                >
-                  Users
-                </a>
-              </button>
-              informations
-            </h5>
-          </li>
-          <li> 
-            <h5 className="mt-3">
-              Save your
-              <button className="btn  btn-sm">
-                <a
-                  className="nav-link link-warning text-uppercase h5"
-                  href="favourites"
-                >
-                  favourite Users
-                </a>
-              </button>
-            </h5>
-          </li> */}
-          {/* <li>
-            <h5 className="mt-3">
-              Update
-              <button className="btn  btn-sm">
-                <a
-                  className="nav-link link-warning text-uppercase h5"
-                  href="profile"
-                >
-                  your profile details
-                </a>
-              </button>
-            </h5>
-          </li> */}
         </ul>
       </div>
     </Fragment>

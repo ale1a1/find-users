@@ -12,8 +12,6 @@ export function MyProfile(props) {
   const [currentUser, setCurrentUser] = useState({});
   const [loader, setLoader] = useState(true);
 
-  //////////////CASINO DEL LOP START OF TESTS
-
   const retrievedUser = loginRepository.list();
   const currentUserEmail = { email: retrievedUser[0].email };
 
@@ -27,30 +25,8 @@ export function MyProfile(props) {
       .getCurrentUser(currentUserEmail)
       .then((user) => setCurrentUser(user))
       .then(props.loaderSwitcher(false))
-      .then(setTimeout(loaderFunct, 400));
+      .then(setTimeout(loaderFunct, 1000));
   }, []);
-
-  // const retrievedUser = loginRepository.list();
-  // const currentUserEmail = { email: retrievedUser[0] };
-  // usersService
-  //   .getCurrentUser(currentUserEmail)
-  //   .then((user) => setCurrentUser(user));
-
-  // const user = usersService
-  //   .getCurrentUser(currentUserEmail)
-  //   .then((user) => user);
-
-  // console.log(user);
-
-  // const [currentUser, setCurrentUser] = useState({ name: "alex" });
-
-  // console.log(currentUser);
-
-  //////////////CASINO DEL LOP END OF TESTS
-
-  // const updateUser = (updatedUser) => {
-  //   setCurrentUser(updatedUser);
-  // };
 
   const updateUser = () => {
     usersService

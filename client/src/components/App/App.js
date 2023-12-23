@@ -56,7 +56,7 @@ export function App() {
   ) : (
     <Navbar hidden="d-none " logoutHandler={logoutHandler} />
   );
-
+  
   return (
     <Fragment>
       {navBar}

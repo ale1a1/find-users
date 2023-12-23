@@ -10,7 +10,6 @@ import "../../style.css";
 
 const favouriteUsersService = new FavouriteUsersService();
 const loginRepository = new LoginRepository();
-// const owner = loginRepository.list()[0];
 const currentUserID = loginRepository.list()[0]?.id;
 
 export class FavouriteUsers extends Component {
@@ -18,23 +17,9 @@ export class FavouriteUsers extends Component {
     super(props);
     this.state = {
       favouriteUsers: [],
-      // currentUser: { name: "mario" },
       currentUser: {},
       loader: true,
     };
-
-    // this.removeFavourite = (user) => {
-    //   favouriteUsersService.removeUser(user);
-    //   favouriteUsersService
-    //     .getUsers()
-    //     .then((favouriteUsers) => this.setState({ favouriteUsers }));
-    // };
-
-    // this.onRemove = (user) => {
-    //   this.removeFavourite(user);
-    // };
-
-    //////Fai una cosa simile per USERLIST!!!
 
     this.onRemove = async (user) => {
       await favouriteUsersService.removeUser(user);
@@ -60,23 +45,6 @@ export class FavouriteUsers extends Component {
     };
   }
 
-  // useEffect(() => {
-  //   usersService.getUsers().then((users) => setUsers(users));
-  //   // favouriteUsersService
-  //   //   .getUsersFromJunction(currentUserID)
-  //   //   .then((users) => users.map((user) => user.id))
-  //   //   .then((idList) => favouriteUsersService.getUsers(idList))
-  //   //   .then((favUsers) => setFavouriteUsersList(favUsers));
-  //   favouriteUsersService
-  //     .getUsersFromJunction(currentUserID)
-  //     .then((users) => users.map((user) => parseInt(user.favUserID)))
-  //     .then((idList) => favouriteUsersService.getUsers(idList))
-  //     .then((favUsers) => setFavouriteUsersList(favUsers));
-  //   // favouriteUsersService
-  //   //   .getUsers(favUsersJunctionIdList)
-  //   //   .then((favouriteUsers) => setFavouriteUsersList(favouriteUsers));
-  // }, []);
-
   componentDidMount() {
     this.props.loaderSwitcher(true);
     favouriteUsersService
@@ -85,14 +53,8 @@ export class FavouriteUsers extends Component {
       .then((idList) => favouriteUsersService.getUsers(idList))
       .then((favUsers) => this.setState({ favouriteUsers: favUsers }))
       .then(this.props.loaderSwitcher(false))
-      .then(setTimeout(this.loaderFunct, 400));
+      .then(setTimeout(this.loaderFunct, 1000));
   }
-
-  // componentDidMount() {
-  //   favouriteUsersService
-  //     .getUsers(owner)
-  //     .then((favouriteUsers) => this.setState({ favouriteUsers }));
-  // }
 
   render() {
     const loader = this.state.loader;

@@ -57,7 +57,7 @@ export function Navbar(props) {
           </button>
           <div className="collapse navbar-collapse" id="Navbar">
             <ul className="navbar-nav ms-5 me-auto mb-2 mb-lg-0">
-              <li className="nav-item me-3">
+              <li className="nav-item me-lg-3 ">
                 <a
                   className="nav-link  text-uppercase"
                   href="/"
@@ -65,7 +65,7 @@ export function Navbar(props) {
                   Home
                 </a>
               </li>
-              <li className="nav-item me-3">
+              <li className="nav-item me-lg-3">
                 <a
                   className="nav-link  text-uppercase"
                   href="/users"
@@ -73,7 +73,7 @@ export function Navbar(props) {
                   Users list
                 </a>
               </li>
-              <li className="nav-item me-3">
+              <li className="nav-item me-lg-3">
                 <a
                   className="nav-link  text-uppercase"
                   href="/favourites"
@@ -81,7 +81,7 @@ export function Navbar(props) {
                   Favourites
                 </a>
               </li>
-              <li className="nav-item me-3">
+              <li className="nav-item me-lg-3">
                 <a
                   className="nav-link  text-uppercase"
                   href="/profile"
@@ -91,7 +91,7 @@ export function Navbar(props) {
               </li>
             </ul>
             <div
-              className="btn btn-outline-dark btn-sm"
+              className="btn btn-outline-dark btn-sm me-lg-3"
               role="button"
               onClick={logoutModalSwitcher}
             >

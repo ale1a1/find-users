@@ -16,8 +16,6 @@ export function LoginPage(props) {
   setTimeout(test(), 1000)
 
 
-
-
   return (
       
     <Fragment>   

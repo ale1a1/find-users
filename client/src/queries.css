@@ -1,16 +1,30 @@
 /**************************/
-/* BELOW 1344px (Smaller desktops) */
+/* BELOW 1444px (Smaller desktops) */
 /**************************/
 
-@media (max-width: 1344px) {
+@media (max-width: 1444px) {
   /* //////////////////////////  LOGIN PAGE ////////////////////////////////// */
-  .loginPageHeader {
-    font-size: 3rem !important;
+  .loginPageMainContent {
+    padding-top: 0;
   }
 
+  .loginPageHeader {
+    font-size: 3rem !important;
+    margin-top: 0rem !important;
+    margin-bottom: 1rem !important;
+  }
+
+  .loginPageMainContent .container-h2 {
+    margin-top: 0 !important;
+  }
+  
   .loginPageButtons {
     margin-top: 5rem !important;
   } 
+
+  .testCredentials {
+    margin-top: 2rem !important;
+  }
 
   /* //////////////////////////  MAIN PAGE ////////////////////////////////// */
 
@@ -47,6 +61,11 @@ font-size: 1.7rem !important;
   }
 
   /* //////////////////////////  DELETE FAV MODAL ////////////////////////////////// */
+
+  .deleteFavModalBox {
+    width: 35% !important;
+    height: 35% !important;
+  }
 
   .deleteFavModalBox h1 {
     margin-bottom: 1rem !important;

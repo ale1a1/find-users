@@ -89,8 +89,8 @@ font-size: 1.7rem !important;
     margin-top: 0.5rem !important;
     font-size: 1.1rem !important;
   }
- 
-}
+
+
 
 /**************************/
 /* BELOW 1200px (Landscape Tablets) */
@@ -217,6 +217,15 @@ font-size: 1.7rem !important;
   .myProfileUpdatedModalBox {
     width: 35% !important;
     height: 37% !important;
+  }
+
+    /* //////////////////////////  LOADER PAGE ////////////////////////////////// */
+
+    .spinner {
+      margin-left: 4vw !important;
+    }
+  
+   
   }
 
 }
@@ -392,6 +401,12 @@ font-size: 1.7rem !important;
     width: 45% !important;
     height: 22% !important;
   }
+
+     /* //////////////////////////  LOADER PAGE ////////////////////////////////// */
+
+     .spinner {
+      margin-left: 6vw !important;
+    }
 
 }
 
@@ -751,6 +766,12 @@ font-size: 1.7rem !important;
   .navbar-brand {
     font-size: 1rem !important;
   }
+
+      /* //////////////////////////  LOADER PAGE ////////////////////////////////// */
+
+      .spinner {
+        margin-left: 10vw !important;
+      }
 }
 
 
@@ -826,6 +847,63 @@ font-size: 1.7rem !important;
     display: none !important;
   }
 
+    /* //////////////////////////  MAIN PAIGE ////////////////////////////////// */ 
+    .mainPageMainContent {
+      gap: 0  !important;
+    }
+  
+    .mainPageList {
+      margin-top: 0 !important;
+    }
+  
+    .mainPageList li {
+      margin-top: 0.8rem !important;
+    }
+  
+    .li-text-mainPage {
+      font-size: 1rem !important;
+      margin-bottom: 2rem !important;
+      padding-right : 1rem !important;
+      padding-left : 1rem !important;
+    }
+
+      /* //////////////////////////  USERS LIST ////////////////////////////////// */
+
+  .table {  
+    margin-bottom: 5rem !important;
+  }
+
+    /* ////////////////////////////// PROFILE TABLE  /////////////////////////////// */
+    .container-profile {
+      padding: 1rem !important;
+    }
+  
+    .table-container {
+      max-width: 100% !important;
+      margin-top: -5vh !important;
+    }
+
+    .table-container button {
+      margin-top: -5vh !important;
+    }
+
+      /* //////////////////////////  DELETE FAV MODAL ////////////////////////////////// */
+  .deleteFavModalBox {
+    width: 80% !important;
+    height: 40% !important;
+  }
+
+    /* //////////////////////////  MY PROFILE UPDATED MODAL ////////////////////////////////// */
+    .myProfileUpdatedModalBox {
+      margin-top: -20vh !important;
+      width: 90% !important;
+      height: 35% !important;
+    }
+
+      /* //////////////////////////  LOGOUT MODAL ////////////////////////////////// */
+  .logoutModalBox {
+    height: 33% !important;
+  }
 
 }
 

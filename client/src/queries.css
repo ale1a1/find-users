@@ -883,6 +883,11 @@ font-size: 1.7rem !important;
       margin-top: -5vh !important;
     }
 
+    .table-container-profile {
+      margin-top: -10vh !important;
+      align-items: center !important;
+    }
+
     .table-container button {
       margin-top: -5vh !important;
     }

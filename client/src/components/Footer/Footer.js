@@ -19,7 +19,7 @@ export function Footer() {
           &copy; Copyright {currentYear}
           <a
             className="text-decoration-none text-light ms-3 text-white-50"
-            href="https://portfolio-ale1a184.herokuapp.com/#home"
+            href="https://alessandro-ladu-portfolio.netlify.app/"
           >
             A.L.W. Media
           </a>

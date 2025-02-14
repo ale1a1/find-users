@@ -22,7 +22,7 @@ export function LoginPage(props) {
       <div>
         <div className="container loginPageMainContent mx-auto pt-5 pb-5">
           <h1 className="mt-5 mb-5 fw-bold text-warning loginPageHeader">
-            FIND USERS WEB APPLICATION
+            FIND USERS APP
           </h1>
           <div className="container-h2">
             <h2 className="text-light mt-5 fs-2">

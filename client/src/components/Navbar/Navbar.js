@@ -42,7 +42,7 @@ export function Navbar(props) {
       >
         <div className="container-fluid">
           <a className="navbar-brand font-monospace" href="/">
-            Find Users Web Application
+            Find Users App
           </a>
           <button
             className="navbar-toggler"
